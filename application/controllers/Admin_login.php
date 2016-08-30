@@ -8,7 +8,7 @@ date_default_timezone_set('Asia/Kolkata');
 */
 
 //error_reporting(E_PARSE);
-error_reporting(0);
+error_reporting(E_ALL);
 require APPPATH.'/libraries/REST_Controller.php';
 require APPPATH.'/libraries/variableconfig.php';
 require APPPATH.'/libraries/validationandresult.php';
@@ -101,7 +101,6 @@ class Admin_login extends REST_Controller {
 		$this->db->from('admin');
 		$query = $this->db->get();
 		$result = $query->result_array();
-		
 		return $result;
 	}
 	
