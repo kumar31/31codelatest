@@ -13,7 +13,7 @@ require APPPATH.'/libraries/REST_Controller.php';
 require APPPATH.'/libraries/variableconfig.php';
 require APPPATH.'/libraries/validationandresult.php';
 
-class talent_account_close extends REST_Controller {
+class Talent_account_close extends REST_Controller {
 	
 	public function __construct()
 	{

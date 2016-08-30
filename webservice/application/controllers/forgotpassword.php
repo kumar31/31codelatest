@@ -11,7 +11,7 @@ error_reporting(getenv( 'SOIREE_ERROR_REPORTING' ));
 require APPPATH.'/libraries/REST_Controller.php';
 require APPPATH.'/libraries/variableconfig.php';
 require APPPATH.'/libraries/validationandresult.php';
-class forgotpassword extends REST_Controller {
+class Forgotpassword extends REST_Controller {
 	
 	public function __construct()
 	{

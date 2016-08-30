@@ -13,7 +13,7 @@ require APPPATH.'/libraries/REST_Controller.php';
 require APPPATH.'/libraries/variableconfig.php';
 require APPPATH.'/libraries/validationandresult.php'; 
 
-class invite_added_talents extends REST_Controller {
+class Invite_added_talents extends REST_Controller {
 	
 	public function __construct()
 	{

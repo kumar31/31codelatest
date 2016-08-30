@@ -13,7 +13,7 @@ require APPPATH.'/libraries/REST_Controller.php';
 require APPPATH.'/libraries/variableconfig.php';
 require APPPATH.'/libraries/validationandresult.php';
 
-class update_client_card_details extends REST_Controller {
+class Update_client_card_details extends REST_Controller {
 	
 	public function __construct()
 	{

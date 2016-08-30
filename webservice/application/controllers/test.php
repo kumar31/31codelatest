@@ -12,7 +12,7 @@ error_reporting(getenv( 'SOIREE_ERROR_REPORTING' ));
 require APPPATH.'/libraries/REST_Controller.php';
 
 
-class test extends REST_Controller {
+class Test extends REST_Controller {
 	
 	public function __construct()
 	{

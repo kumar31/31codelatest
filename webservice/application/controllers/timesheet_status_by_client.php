@@ -13,7 +13,7 @@ require APPPATH.'/libraries/REST_Controller.php';
 require APPPATH.'/libraries/variableconfig.php';
 require APPPATH.'/libraries/validationandresult.php';
 
-class timesheet_status_by_client extends REST_Controller {
+class Timesheet_status_by_client extends REST_Controller {
 	
 	public function __construct()
 	{

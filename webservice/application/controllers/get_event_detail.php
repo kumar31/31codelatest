@@ -13,7 +13,7 @@ require APPPATH.'/libraries/REST_Controller.php';
 require APPPATH.'/libraries/variableconfig.php';
 require APPPATH.'/libraries/validationandresult.php'; 
 
-class get_event_detail extends REST_Controller {
+class Get_event_detail extends REST_Controller {
 	
 	public function __construct()
 	{

@@ -13,7 +13,7 @@ require APPPATH.'/libraries/REST_Controller.php';
 require APPPATH.'/libraries/variableconfig.php';
 require APPPATH.'/libraries/validationandresult.php'; 
 
-class review_event extends REST_Controller {
+class Review_event extends REST_Controller {
 	
 	public function __construct()
 	{

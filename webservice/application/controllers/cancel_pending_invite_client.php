@@ -13,7 +13,7 @@ require APPPATH.'/libraries/REST_Controller.php';
 require APPPATH.'/libraries/variableconfig.php';
 require APPPATH.'/libraries/validationandresult.php';
 
-class cancel_pending_invite_client extends REST_Controller {
+class Cancel_pending_invite_client extends REST_Controller {
 	
 	public function __construct()
 	{
