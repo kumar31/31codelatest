@@ -15,4 +15,16 @@ class variableconfig {
   function smsurl() {
     return getenv( 'SOIREE_BASE_URL' ) . '/twilio/Services/sms.php';
   }
+
+  function webserviceurl() {
+    return getenv( 'SOIREE_BASE_URL' ) . '/webservice/';
+  }
+
+  function stripeurl() {
+    return getenv( 'SOIREE_BASE_URL' ) . '/stripe/';
+  }
+  
+  function imgurl() {
+    return getenv( 'SOIREE_BASE_URL' ) . '/nectorimg/';
+  }
 }
