@@ -1,5 +1,5 @@
 <?php 
-error_reporting(0);
+error_reporting(getenv( 'SOIREE_ERROR_REPORTING' ));
 include('reg_header.php'); ?>
 
 	<script>
@@ -867,28 +867,7 @@ include('reg_header.php'); ?>
 	$("[data-toggle=popover]")
 	.popover({html:true})
 	</script>
-	<!--<script>
-	$(document).ready(function(){
-		var type = 2; 
-		var typeid = 1; 
-			
-			var url = '<?php echo $webserviceurl; ?>index.php/type';
-			
-			$.ajax({
-				'type' : 'POST',
-				'url': url,
-				'data': {'typeid':typeid,'type':type},
-				//'dataType': 'json',
-				success: function(data) {
-					var message = JSON.stringify(data['StatusCode']);
-					var message = message.replace(/\"/g, "");
-					//alert(JSON.stringify(data['Message']));
-					
-				}
-			
-			});
-	});
-	</script>-->
+	
 	<script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
 	<script>
 		webshims.setOptions('forms-ext', {types: 'date'});

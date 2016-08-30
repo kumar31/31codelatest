@@ -1,5 +1,5 @@
 <?php 
-error_reporting(0);
+error_reporting(getenv( 'SOIREE_ERROR_REPORTING' ));
 include('admin_header.php'); ?>
 <?php $adminid = $myuser_id;  ?>
 <style>
@@ -49,7 +49,7 @@ include('admin_header.php'); ?>
 							<td><?php echo $val['outfit_fee']; ?>%</td>
 							<td><?php echo $val['address']; ?></td>
 							<td>
-								<button class="btn btn-primary btn-sm" onclick="edit('<?php echo $val['agent_id']; ?>','<?php echo $val['name']; ?>','<?php echo $val['email']; ?>','<?php echo $val['percentage']; ?>','<?php echo $val['password']; ?>','<?php echo $val['agent_id']; ?>','<?php echo $val['address']; ?>','<?php echo $val['outfit_fee']; ?>')">Edit
+								<button class="btn btn-primary btn-sm" onclick="edit('<?php echo $val['agent_id']; ?>','<?php echo $val['name']; ?>','<?php echo $val['email']; ?>','<?php echo $val['percentage']; ?>','<?php echo $val['agent_id']; ?>','<?php echo $val['address']; ?>','<?php echo $val['outfit_fee']; ?>')">Edit
 								</button>
 								&nbsp;&nbsp;&nbsp;
 								<?php
@@ -108,7 +108,7 @@ include('admin_header.php'); ?>
 								  <div class="form-group">
 									<label class="control-label col-sm-2" for="password">Password</label>
 									<div class="col-sm-10"> 
-									  <input type="password" class="form-control" id="password" placeholder="Enter password">
+									  <input type="password" class="form-control" id="password" value="" placeholder="Enter password">
 									  <br>
 									</div>
 								  </div>
@@ -145,13 +145,12 @@ include('admin_header.php'); ?>
 						  </div>
 						</div>
 						<script>
-						function edit(id,name,email,percentage,password,agentid,address,outfitfee) {
+						function edit(id,name,email,percentage,agentid,address,outfitfee) {
 							$('#name').val(name);
 							$('#email').val(email);
 							$('#per').val(percentage);
 							$('#address').val(address);
-							$('#outfitper').val(outfitfee);
-							$('#password').val(password);
+							$('#outfitper').val(outfitfee);							
 							$('#agentid').val(agentid);
 							$('#myModal').modal('show');
 						}
