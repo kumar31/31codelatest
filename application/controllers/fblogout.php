@@ -1,7 +1,7 @@
 <?php
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
-class fblogout extends CI_Controller
+class Fblogout extends CI_Controller
 {
     public function __construct()
     {

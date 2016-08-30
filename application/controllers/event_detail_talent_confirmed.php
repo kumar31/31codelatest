@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 error_reporting(getenv( 'SOIREE_ERROR_REPORTING' ));
-class event_detail_talent_confirmed extends CI_Controller {
+class Event_detail_talent_confirmed extends CI_Controller {
 
 public function __construct()
 	{

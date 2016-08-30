@@ -3,7 +3,7 @@
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 error_reporting(getenv( 'SOIREE_ERROR_REPORTING' ));
-class upload extends CI_Controller {
+class Upload extends CI_Controller {
 
 public function __construct() {
   parent::__construct();

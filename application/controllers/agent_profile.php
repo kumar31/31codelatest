@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 error_reporting(getenv( 'SOIREE_ERROR_REPORTING' ));
-class agent_profile extends CI_Controller {
+class Agent_profile extends CI_Controller {
 
 public function __construct()
 	{

@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 error_reporting(getenv( 'SOIREE_ERROR_REPORTING' ));
-class account_details extends CI_Controller {
+class Account_details extends CI_Controller {
 
 public function __construct()
 	{

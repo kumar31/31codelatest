@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 error_reporting(getenv( 'SOIREE_ERROR_REPORTING' ));
-class talent_truth_verification extends CI_Controller {
+class Talent_truth_verification extends CI_Controller {
 
 public function __construct()
 	{

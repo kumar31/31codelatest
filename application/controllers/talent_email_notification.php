@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 error_reporting(getenv( 'SOIREE_ERROR_REPORTING' ));
-class talent_email_notification extends CI_Controller {
+class Talent_email_notification extends CI_Controller {
 
 public function __construct()
 	{
