@@ -84,7 +84,7 @@ $db['default'] = array(
 	'username' => constant("DB_USER"),
 	'password' => constant("DB_PASS"),
 	'database' => constant("DB_DATABASE"),
-	'dbdriver' => 'mysqli',
+	'dbdriver' => 'mysql',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
