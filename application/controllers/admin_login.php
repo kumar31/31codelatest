@@ -12,7 +12,7 @@ error_reporting(0);
 require APPPATH.'/libraries/REST_Controller.php';
 require APPPATH.'/libraries/variableconfig.php';
 require APPPATH.'/libraries/validationandresult.php';
-class Admin_login extends REST_Controller {
+class admin_login extends REST_Controller {
 	
 	public function __construct()
 	{
