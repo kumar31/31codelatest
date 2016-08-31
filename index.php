@@ -66,7 +66,7 @@
 switch (ENVIRONMENT)
 {
 	case 'development':
-		error_reporting(-1);
+		error_reporting(getenv( 'SOIREE_ERROR_REPORTING' ));
 		ini_set('display_errors', 1);
 	break;
 
