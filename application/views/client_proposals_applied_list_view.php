@@ -151,7 +151,7 @@ foreach($blogs as $key=>$val)
 						 </a>
 						<?php } else { ?>
 							<a class=
-							   "btn btn-submit btn-lg largeHeight once-only btn_confirms" value="" data-toggle="modal" data-target="#myModalcard"
+							   "btn btn-submit btn-lg largeHeight" value="" data-toggle="modal" data-target="#myModalcard"
 							   role="button">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hire&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							 </a>
 						<?php } ?>
