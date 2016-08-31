@@ -31,7 +31,14 @@ $is_advance_paid = $event_detail[0]['is_advance_paid'];
 			  <p class="centerText ">
 			  <?php 
 				$status = $event_detail[0]['launch_status'];
-				$stripe_id = $event_detail[0]['stripe_id'];
+				
+				$this->db->select('*');			
+				$this->db->where('client_id',$myuser_id);					
+				$this->db->from('client_details');
+				$query = $this->db->get();			
+				$results = $query->result_array(); 
+				
+				$stripe_id = $results[0]['stripe_id'];
 				if(($status == 0) && ($stripe_id != "")) {
 			  ?>
 			  <input name="event_id" id="event_id" type="hidden" value="<?php echo $event_detail[0]['event_id']; ?>">
