@@ -226,7 +226,7 @@ foreach($blogs as $key=>$val)
 					</div>-->
 									  
 						<a class=
-					   "btn btn-danger btn-lg largeHeight once-only btn_rejects" href="<?php echo base_url();?>index.php/client_update_payment_details/1"
+					   "btn btn-danger btn-lg largeHeight" href="<?php echo base_url();?>index.php/client_update_payment_details/1"
 					   role="button" id="">Add now
 					 </a>	
 					</div>
