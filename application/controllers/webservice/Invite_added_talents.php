@@ -20,7 +20,7 @@ class Invite_added_talents extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->library('form_validation');
-		$this->load->model('invite_added_talents_model');
+		$this->load->model('webservice/invite_added_talents_model','invite_added_talents_model');
 		$this->form_validation->set_error_delimiters('', '');
 	}
 	

@@ -20,7 +20,7 @@ class Get_client_profile extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url'); 
 		$this->load->library('form_validation');
-		$this->load->model('get_client_profile_model');
+		$this->load->model('webservice/get_client_profile_model','get_client_profile_model');
 		$this->form_validation->set_error_delimiters('', '');
 	}
 	

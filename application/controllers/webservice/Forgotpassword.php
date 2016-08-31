@@ -18,7 +18,7 @@ class Forgotpassword extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->library('form_validation');
-		$this->load->model('forgotpassword_model');
+		$this->load->model('webservice/forgotpassword_model','forgotpassword_model');
 		$this->form_validation->set_error_delimiters('', '');
 	}
 	

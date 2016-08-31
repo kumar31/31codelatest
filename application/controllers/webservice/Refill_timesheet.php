@@ -20,7 +20,7 @@ class Refill_timesheet extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->library('form_validation');
-		$this->load->model('refill_timesheet_model');
+		$this->load->model('webservice/refill_timesheet_model','refill_timesheet_model');
 		$this->form_validation->set_error_delimiters('', '');
 	}
 	

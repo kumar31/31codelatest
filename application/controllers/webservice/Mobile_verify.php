@@ -20,7 +20,7 @@ class Mobile_verify extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->library('form_validation');
-		$this->load->model('mobile_verify_model');
+		$this->load->model('webservice/mobile_verify_model','mobile_verify_model');
 		$this->form_validation->set_error_delimiters('', '');
 	}
 	

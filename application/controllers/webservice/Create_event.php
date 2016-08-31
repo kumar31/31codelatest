@@ -20,7 +20,7 @@ class Create_event extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->library('form_validation');
-		$this->load->model('create_event_model');
+		$this->load->model('webservice/create_event_model','create_event_model');
 		$this->form_validation->set_error_delimiters('', '');
 	}
 	

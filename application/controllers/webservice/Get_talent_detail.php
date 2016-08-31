@@ -20,7 +20,7 @@ class Get_talent_detail extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url'); 
 		$this->load->library('form_validation');
-		$this->load->model('get_talent_detail_model');
+		$this->load->model('webservice/get_talent_detail_model','get_talent_detail_model');
 		$this->form_validation->set_error_delimiters('', '');
 	}
 	

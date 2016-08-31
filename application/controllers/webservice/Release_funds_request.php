@@ -20,8 +20,8 @@ class Release_funds_request extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->library('form_validation');
-		$this->load->model('release_funds_request_model');
-		$this->load->model('mail_model');
+		$this->load->model('webservice/release_funds_request_model','release_funds_request_model');
+		$this->load->model('webservice/mail_model','mail_model');
 		$this->form_validation->set_error_delimiters('', '');
 	}
 	

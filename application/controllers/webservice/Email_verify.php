@@ -21,7 +21,7 @@ class Email_verify extends REST_Controller {
 		$this->load->helper('url');
 		$this->load->library('form_validation');
 		//$this->load->model('email_verify_model');
-		$this->load->model('mail_model');
+		$this->load->model('webservice/mail_model','mail_model');
 		$this->form_validation->set_error_delimiters('', '');
 	}
 	

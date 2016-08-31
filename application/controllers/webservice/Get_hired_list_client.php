@@ -20,7 +20,7 @@ class Get_hired_list_client extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url'); 
 		$this->load->library('form_validation');
-		$this->load->model('get_hired_list_client_model');
+		$this->load->model('webservice/get_hired_list_client_model','get_hired_list_client_model');
 		$this->form_validation->set_error_delimiters('', '');
 	}
 	

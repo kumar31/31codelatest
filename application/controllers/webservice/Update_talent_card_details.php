@@ -20,7 +20,7 @@ class Update_talent_card_details extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->library('form_validation');
-		$this->load->model('update_talent_card_details_model');
+		$this->load->model('webservice/update_talent_card_details_model','update_talent_card_details_model');
 		$this->form_validation->set_error_delimiters('', '');
 	}
 	

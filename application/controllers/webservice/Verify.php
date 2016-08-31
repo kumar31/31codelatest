@@ -14,7 +14,7 @@ class Verify extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->helper('url');
-		$this->load->model('verify_model');
+		$this->load->model('webservice/verify_model','verify_model');
 	}
 	
 	

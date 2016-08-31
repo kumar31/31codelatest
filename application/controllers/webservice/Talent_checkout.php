@@ -20,7 +20,7 @@ class Talent_checkout extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->library('form_validation');
-		$this->load->model('talent_checkout_model');
+		$this->load->model('webservice/talent_checkout_model','talent_checkout_model');
 		$this->form_validation->set_error_delimiters('', '');
 	}
 	

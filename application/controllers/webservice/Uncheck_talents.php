@@ -20,7 +20,7 @@ class Uncheck_talents extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->library('form_validation');
-		$this->load->model('uncheck_talents_model');
+		$this->load->model('webservice/uncheck_talents_model','uncheck_talents_model');
 		$this->form_validation->set_error_delimiters('', '');
 	}
 	

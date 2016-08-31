@@ -20,7 +20,7 @@ class Cancel_pending_invite_client extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->library('form_validation');
-		$this->load->model('cancel_pending_invite_client_model');
+		$this->load->model('webservice/cancel_pending_invite_client_model','cancel_pending_invite_client_model');
 		$this->form_validation->set_error_delimiters('', '');
 	}
 	

@@ -20,7 +20,7 @@ class Talent_update_timesheet extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->library('form_validation');
-		$this->load->model('talent_update_timesheet_model');
+		$this->load->model('webservice/talent_update_timesheet_model','talent_update_timesheet_model');
 		$this->form_validation->set_error_delimiters('', '');
 	}
 	

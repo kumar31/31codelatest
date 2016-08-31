@@ -20,7 +20,7 @@ class Talent_update_password extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->library('form_validation');
-		$this->load->model('talent_update_password_model');
+		$this->load->model('webservice/talent_update_password_model','talent_update_password_model');
 		$this->form_validation->set_error_delimiters('', '');
 		$this->load->library('encrypt');
 	}

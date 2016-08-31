@@ -9,7 +9,7 @@ class Reset_password extends CI_Controller {
         
 		$this->load->helper('url');
 		$this->load->helper('form');
-		$this->load->model('resetpassword_model');
+		$this->load->model('webservice/resetpassword_model','resetpassword_model');
 		
         
     }

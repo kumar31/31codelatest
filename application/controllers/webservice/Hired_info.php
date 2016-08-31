@@ -20,7 +20,7 @@ class Hired_info extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url'); 
 		$this->load->library('form_validation');
-		$this->load->model('hired_info_model');
+		$this->load->model('webservice/hired_info_model','hired_info_model');
 		$this->form_validation->set_error_delimiters('', '');
 	}
 	

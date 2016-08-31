@@ -20,7 +20,7 @@ class Client_registration extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->library('form_validation');
-		$this->load->model('client_registration_model');
+		$this->load->model('webservice/client_registration_model','client_registration_model');
 		$this->load->model('mail_model');
 		$this->form_validation->set_error_delimiters('', '');
 	}

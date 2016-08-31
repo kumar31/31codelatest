@@ -20,7 +20,7 @@ class Accept_event_by_talent extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->library('form_validation');
-		$this->load->model('accept_event_by_talent_model');
+		$this->load->model('webservice/accept_event_by_talent_model','accept_event_by_talent_model');
 		$this->form_validation->set_error_delimiters('', '');
 	}
 	

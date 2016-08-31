@@ -20,7 +20,7 @@ class Timesheet_status_by_client extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->library('form_validation');
-		$this->load->model('timesheet_status_by_client_model');
+		$this->load->model('webservice/timesheet_status_by_client_model','timesheet_status_by_client_model');
 		$this->form_validation->set_error_delimiters('', '');
 	}
 	

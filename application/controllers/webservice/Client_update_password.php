@@ -20,7 +20,7 @@ class Client_update_password extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->library('form_validation');
-		$this->load->model('client_update_password_model');
+		$this->load->model('webservice/client_update_password_model','client_update_password_model');
 		$this->form_validation->set_error_delimiters('', '');
 		$this->load->library('encrypt');
 	}

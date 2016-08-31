@@ -20,7 +20,7 @@ class Update_emailnotification_talent extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->library('form_validation');
-		$this->load->model('update_emailnotification_talent_model');
+		$this->load->model('webservice/update_emailnotification_talent_model','update_emailnotification_talent_model');
 		$this->form_validation->set_error_delimiters('', '');
 	}
 	

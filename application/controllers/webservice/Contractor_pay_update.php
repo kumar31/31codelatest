@@ -20,7 +20,7 @@ class Contractor_pay_update extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url'); 
 		$this->load->library('form_validation');
-		$this->load->model('event_type_model');
+		$this->load->model('webservice/event_type_model','event_type_model');
 		$this->form_validation->set_error_delimiters('', '');
 	}
 	

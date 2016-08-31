@@ -20,7 +20,7 @@ class Event_close extends REST_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->library('form_validation');
-		$this->load->model('event_close_model');
+		$this->load->model('webservice/event_close_model','event_close_model');
 		$this->form_validation->set_error_delimiters('', '');
 	}
 	
