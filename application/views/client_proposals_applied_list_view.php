@@ -139,7 +139,14 @@ foreach($blogs as $key=>$val)
                 <div class="col-xs-12 col-sm-3"> 
 					<?php 
 						$launch_status = $event_detail[0]['launch_status'];
-						$stripe_id = $event_detail[0]['stripe_id'];
+						
+						$this->db->select('*');			
+						$this->db->where('client_id',$myuser_id);					
+						$this->db->from('client_details');
+						$query = $this->db->get();			
+						$results = $query->result_array(); 
+						
+						$stripe_id = $results[0]['stripe_id'];						
 						if($launch_status == 0) {
 					  ?>
                    <div class="checkbox checkbox-warning"> 
