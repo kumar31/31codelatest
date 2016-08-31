@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 date_default_timezone_set("GMT");
-class hired_info_model extends CI_Model {
+class Hired_info_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct(); 
