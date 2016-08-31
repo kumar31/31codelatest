@@ -224,9 +224,9 @@ a:hover, a:focus {
               </option>
 			  <option value="" >100- 200
               </option>
-			  <option value="" >500- 1000
-              </option>
 			  <option value="" >200- 500
+              </option>
+			  <option value="" >500- 1000
               </option>
 			  <option value="" >More than 1000
               </option>
