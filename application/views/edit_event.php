@@ -207,7 +207,7 @@ include('client_header.php'); ?>
 			<?php $range = range(1,30); 
 			$i = 1;
 			foreach($range as $val){ if($i == 1){ ?> 
-				<option value="" selected="selected"><?php echo $val; ?></option>
+				<option value="" <?php if(isset($event_detail[0]['number_of_waiters']) && $event_detail[0]['number_of_waiters'] == $val) echo 'selected="selected"';?>><?php echo $val; ?></option>
 			<?php }else{ ?>
 			<option value=""><?php echo $val; ?></option>
 			<?php }$i++;  } ?>
