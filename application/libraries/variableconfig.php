@@ -1,11 +1,11 @@
 <?php
 class variableconfig {
   function mailurl() {
-    return getenv( 'SOIREE_BASE_URL' ) . '/webservice/index.php/verify/';
+    return getenv( 'SOIREE_BASE_URL' ) . '/index.php/webservice/verify/';
   }
 
   function fpassurl() {
-    return getenv( 'SOIREE_BASE_URL' ) . '/webservice/index.php/reset_password/';
+    return getenv( 'SOIREE_BASE_URL' ) . '/index.php/webservice/reset_password/';
   }
 
   function from_email() {
@@ -17,7 +17,7 @@ class variableconfig {
   }
 
   function webserviceurl() {
-    return getenv( 'SOIREE_BASE_URL' ) . '/webservice/';
+    return getenv( 'SOIREE_BASE_URL' ) . '/index.php/webservice/';
   }
 
   function stripeurl() {
