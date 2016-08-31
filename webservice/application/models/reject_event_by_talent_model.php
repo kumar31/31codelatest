@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 date_default_timezone_set("GMT");
-class reject_event_by_talent_model extends CI_Model {
+class Reject_event_by_talent_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();

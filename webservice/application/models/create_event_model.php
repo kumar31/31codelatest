@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 date_default_timezone_set("GMT");
-class create_event_model extends CI_Model {
+class Create_event_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();

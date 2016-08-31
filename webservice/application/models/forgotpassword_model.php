@@ -3,7 +3,7 @@ error_reporting(0);
 
 require_once APPPATH.'/libraries/variableconfig.php';
 
-class forgotpassword_model extends CI_Model {
+class Forgotpassword_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();

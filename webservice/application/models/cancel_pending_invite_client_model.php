@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 date_default_timezone_set("GMT");
-class cancel_pending_invite_client_model extends CI_Model {
+class Cancel_pending_invite_client_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();

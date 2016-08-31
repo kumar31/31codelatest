@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 require APPPATH.'/libraries/class.phpmailer.php'; 
-class events_mail_model extends CI_Model {
+class Events_mail_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct(); 

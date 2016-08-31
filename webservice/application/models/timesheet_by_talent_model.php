@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 date_default_timezone_set("GMT");
-class timesheet_by_talent_model extends CI_Model {
+class Timesheet_by_talent_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();
