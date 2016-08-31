@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 date_default_timezone_set("GMT");
 require APPPATH.'/libraries/class.phpmailer.php';
-class mail_model extends CI_Model {
+class Mail_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct(); 

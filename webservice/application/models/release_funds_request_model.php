@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 date_default_timezone_set("GMT");
-class release_funds_request_model extends CI_Model {
+class Release_funds_request_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();

@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 date_default_timezone_set("GMT");
 
-class mobile_verify_model extends CI_Model {
+class Mobile_verify_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();
