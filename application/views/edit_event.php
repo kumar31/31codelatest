@@ -205,12 +205,10 @@ include('client_header.php'); ?>
             </label>
             <select class="col-xs-12 form-control form-group" name="" id="waitersnum">
 			<?php $range = range(1,30); 
-			$i = 1;
-			foreach($range as $val){ if($i == 1){ ?> 
+			
+			foreach($range as $val){  ?> 
 				<option value="" <?php if(isset($event_detail[0]['number_of_waiters']) && ($event_detail[0]['number_of_waiters'] == $val)) echo 'selected="selected"';?>><?php echo $val; ?></option>
-			<?php }else{ ?>
-			<option value=""><?php echo $val; ?></option>
-			<?php }$i++;  } ?>
+			<?php   } ?>
               
             </select>
           </div>
