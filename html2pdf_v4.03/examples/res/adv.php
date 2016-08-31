@@ -54,7 +54,7 @@ $company = $rowss['company'];
     </table>    
 	<br>
 	<br>
-	<table style="width: 50%; font-size: 16px;"  cellspacing="0">
+	<table style="width: 100%; font-size: 16px;"  cellspacing="0">
 		<tr>
 			<td style="width: 100%">Invoice Id : <b><?php echo $transaction_id; ?> </b>  </td>
 			<td style="width: 100%; float: right; font-size: 18px; text-align: right;"><b></b></td>
