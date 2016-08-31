@@ -479,7 +479,7 @@ The right Outfit makes a party. <br><br>
 				var usertype = $("input[name='user']:checked").val();
 			}
 		
-			var url = '<?php echo $webserviceurl; ?>index.php/login';
+			var url = '<?php echo $webserviceurl; ?>login';
 			//alert(email);alert(password);
 			$.ajax({
 				'type' : 'POST',
@@ -567,7 +567,7 @@ The right Outfit makes a party. <br><br>
 		var email = $("#aemail").val();
 		var password = $("#apassword").val();
 		
-			var url = '<?php echo $webserviceurl; ?>index.php/agent_login';
+			var url = '<?php echo $webserviceurl; ?>agent_login';
 			
 			$.ajax({
 				'type' : 'POST',
