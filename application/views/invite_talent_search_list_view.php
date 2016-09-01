@@ -88,7 +88,7 @@ foreach($blogs as $key=>$val)
                        <p><span class="pull-left">Rating :</span>
 						
 							<ul class="list-inline list-unstyled list-active">
-								<li><?php $rating_avg = $val['average_rating']; ?>
+								<li><?php $rating_avg = $val['rating_avg']; ?>
 								<?php 
 									if($rating_avg == 0) { ?>
 										&nbsp;<span class="glyphicon glyphicon-star-empty"></span>
