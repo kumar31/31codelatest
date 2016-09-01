@@ -1,7 +1,13 @@
 <?php 
 error_reporting(getenv( 'SOIREE_ERROR_REPORTING' ));
 include('talent_header.php');
-$this->load->model('webservice/mail_model','mail_model'); ?>
+$ci = &get_instance();
+
+$ci->load->model('mail_model');
+
+
+
+ ?>
   <body>
     <div class="orangehead">
       <div class="container">
@@ -52,7 +58,7 @@ $this->load->model('webservice/mail_model','mail_model'); ?>
 			$message = "<p>Email: ".$email." <br> First name: ".$fname." <br>Last name: ".$lname." <br> Message: ".$msg."</p>";
 			
 			$to_email = "karthik.c@smaatapps.com";
-			$this->mail_model->send($to_email,$subject,$message);
+			$ci->model->send($to_email,$subject,$message);
 			
 		  }
 		  ?>
