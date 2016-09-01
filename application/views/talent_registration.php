@@ -289,6 +289,7 @@ include('reg_header.php'); ?>
 			<div class="form-group prepend-top emp">
             <label class="" for="">Agency
             </label>
+			<h5 style="color: red;" id="agreemessageag"></h5>
             <select class="col-xs-12 form-control form-group" name="" id="agency" >
 				<option value="0">Select here</option>
 				<?php
@@ -634,11 +635,11 @@ include('reg_header.php'); ?>
 			
 			if($("#already").is(':checked')){
 				$("#agreemessagei9").hide();
-				$("#agreemessagew4").hide();
+				$("#agreemessagew4").hide(); 
 				var agency = $( "#agency option:selected" ).val(); 
 				if(agency == "0") {
-					var agreemessage = "You must select agency";
-				   $("#agreemessage").text(agreemessage);
+					var agreemessageag = "You must select a agency";
+					$("#agreemessageag").text(agreemessageag);
 				}
 				else {
 					reg();
