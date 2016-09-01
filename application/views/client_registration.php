@@ -381,7 +381,7 @@ include('reg_header.php'); ?>
 						}
 						else {
 							var alertmessage = JSON.stringify(data['message']);
-							var alertmessage = alertmessage.replace(/\"/g, "");
+							var alertmessage = alertmessage.replace(/\n"/g, "");
 							$("#alertmsg").text(alertmessage);
 							$("html, body").animate({ scrollTop: 0 }, "slow");
 						}
