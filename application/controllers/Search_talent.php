@@ -179,7 +179,7 @@ public function __construct()
 				
 				$data['blogs'] = $this->checkin_model->rating_details($result);
 				$data['blogs'] = $this->checkin_model->rating_avg($data['blogs']); 
-				//print"<pre>"; print_r($data['blogs']);
+				print"<pre>"; print_r($data['blogs']);
 				$this->load->view('talent_list_view',$data);
 				
 			}
