@@ -49,15 +49,10 @@ include('talent_header.php'); ?>
 			
 			$subject = "Outfit - Need Support";
 			$message = "<p>Email: ".$email." <br> First name: ".$fname." <br>Last name: ".$lname." <br> Message: ".$msg."</p>";
-			$from_email = "support@beta.outfitstaff.com";
 			
-			$to = "tobias@outfitstaff.com";
-			$headers = "MIME-Version: 1.0" . "\r\n";
-			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-			$headers .= 'From: <'.$from_email.'>' . "\r\n";
-			$headers .= 'Cc: '.$from_email.'' . "\r\n";
-			$headers .= 'Reply-To: <'.$from_email.'>' . "\r\n"; 
-			mail($to,$subject,$message,$headers);
+			$to = "car3chan@gmail.com";
+			$this->mail_model->send($to_email,$subject,$message);
+			
 		  }
 		  ?>
             <div class="row narrowrow">
