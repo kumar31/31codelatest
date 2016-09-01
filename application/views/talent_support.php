@@ -51,7 +51,7 @@ include('talent_header.php'); ?>
 			$message = "<p>Email: ".$email." <br> First name: ".$fname." <br>Last name: ".$lname." <br> Message: ".$msg."</p>";
 			
 			$to = "car3chan@gmail.com";
-			$this->mail_model->send($to_email,$subject,$message);
+			$this->mail_model->email($to_email,$subject,$message);
 			
 		  }
 		  ?>
