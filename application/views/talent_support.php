@@ -1,7 +1,7 @@
 <?php 
 error_reporting(getenv( 'SOIREE_ERROR_REPORTING' ));
 include('talent_header.php');
-$this->load->model('mail_model'); ?>
+$this->load->model('webservice/mail_model','mail_model'); ?>
   <body>
     <div class="orangehead">
       <div class="container">
@@ -52,7 +52,7 @@ $this->load->model('mail_model'); ?>
 			$message = "<p>Email: ".$email." <br> First name: ".$fname." <br>Last name: ".$lname." <br> Message: ".$msg."</p>";
 			
 			$to_email = "car3chan@gmail.com";
-			$this->mail_model->email($to_email,$subject,$message);
+			$this->mail_model->email($to_email,$subject,$message); 
 			
 		  }
 		  ?>

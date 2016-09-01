@@ -10,8 +10,7 @@ public function __construct()
 			$this->load->helper('form');
 			$this->load->helper('cookie');
 			$this->load->library('form_validation');
-			$this->load->library('form_validation', 'session');
-			$this->load->model('mail_model');
+			$this->load->library('form_validation', 'session');			
 	
 	}
 	public function index()
