@@ -636,7 +636,7 @@ include('reg_header.php'); ?>
 				$("#agreemessagei9").hide();
 				$("#agreemessagew4").hide();
 				var agency = $( "#agency option:selected" ).val(); 
-				if(agency == 0) {
+				if(agency == "0") {
 					var agreemessage = "You must select agency";
 				   $("#agreemessage").text(agreemessage);
 				}
