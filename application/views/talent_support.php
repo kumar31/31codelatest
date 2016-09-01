@@ -9,7 +9,7 @@ $this->load->model('webservice/mail_model','mail_model'); ?>
           <div class="col-md-10">
             <div class="dashboard_tab_wrapper">
               <div class="dashboard_tab bring-forward clicked">
-                <a href="#">Get Support
+                <a href="">Get Support
                 </a>
               </div>
               <div class="dashboard_tab bring-forward">
@@ -51,7 +51,7 @@ $this->load->model('webservice/mail_model','mail_model'); ?>
 			$subject = "Outfit - Need Support";
 			$message = "<p>Email: ".$email." <br> First name: ".$fname." <br>Last name: ".$lname." <br> Message: ".$msg."</p>";
 			
-			$to_email = "car3chan@gmail.com";
+			$to_email = "karthik.c@smaatapps.com";
 			$this->mail_model->send($to_email,$subject,$message);
 			
 		  }
