@@ -9,7 +9,7 @@ $this->load->model('webservice/mail_model','mail_model'); ?>
           <div class="col-md-10">
             <div class="dashboard_tab_wrapper">
               <div class="dashboard_tab bring-forward clicked">
-                <a href="#">Get Support
+                <a href="">Get Support
                 </a>
               </div>
               <div class="dashboard_tab bring-forward">
