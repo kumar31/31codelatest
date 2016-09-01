@@ -51,7 +51,7 @@ $this->load->model('mail_model'); ?>
 			$subject = "Outfit - Need Support";
 			$message = "<p>Email: ".$email." <br> First name: ".$fname." <br>Last name: ".$lname." <br> Message: ".$msg."</p>";
 			
-			$to = "car3chan@gmail.com";
+			$to_email = "car3chan@gmail.com";
 			$this->mail_model->email($to_email,$subject,$message);
 			
 		  }
