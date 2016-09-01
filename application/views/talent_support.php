@@ -1,13 +1,7 @@
 <?php 
 error_reporting(getenv( 'SOIREE_ERROR_REPORTING' ));
 include('talent_header.php');
-$ci = &get_instance();
-
-$ci->load->model('mail_model');
-
-
-
- ?>
+$this->load->model('webservice/mail_model','mail_model'); ?>
   <body>
     <div class="orangehead">
       <div class="container">
@@ -15,7 +9,7 @@ $ci->load->model('mail_model');
           <div class="col-md-10">
             <div class="dashboard_tab_wrapper">
               <div class="dashboard_tab bring-forward clicked">
-                <a href="">Get Support
+                <a href="#">Get Support
                 </a>
               </div>
               <div class="dashboard_tab bring-forward">
@@ -57,8 +51,8 @@ $ci->load->model('mail_model');
 			$subject = "Outfit - Need Support";
 			$message = "<p>Email: ".$email." <br> First name: ".$fname." <br>Last name: ".$lname." <br> Message: ".$msg."</p>";
 			
-			$to_email = "karthik.c@smaatapps.com";
-			$ci->model->send($to_email,$subject,$message);
+			$to_email = "car3chan@gmail.com";
+			$this->mail_model->send($to_email,$subject,$message); 
 			
 		  }
 		  ?>
