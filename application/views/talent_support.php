@@ -1,6 +1,7 @@
 <?php 
 error_reporting(getenv( 'SOIREE_ERROR_REPORTING' ));
-include('talent_header.php'); ?>
+include('talent_header.php');
+$this->load->model('mail_model'); ?>
   <body>
     <div class="orangehead">
       <div class="container">
