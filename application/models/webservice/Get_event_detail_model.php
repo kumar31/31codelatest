@@ -4,7 +4,7 @@ class Get_event_detail_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct(); 
-		$this->load->model('invite_model');
+		$this->load->model('webservice/invite_model','invite_model');
 	}
 	
 	

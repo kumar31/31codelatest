@@ -4,7 +4,7 @@ class Client_update_password_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('client_model');
+		$this->load->model('webservice/client_model','client_model');
 		$this->load->library('encrypt');
 	}
 	

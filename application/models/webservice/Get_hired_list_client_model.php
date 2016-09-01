@@ -4,10 +4,10 @@ class Get_hired_list_client_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct(); 
-		$this->load->model('review_model');
-		$this->load->model('talent_model');		
-		$this->load->model('hired_info_model');		
-		$this->load->model('event_model');		
+		$this->load->model('webservice/review_model','review_model');
+		$this->load->model('webservice/talent_model','talent_model');		
+		$this->load->model('webservice/hired_info_model','hired_info_model');		
+		$this->load->model('webservice/event_model','event_model');		
 	}
 	
 	

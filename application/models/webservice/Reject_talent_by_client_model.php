@@ -4,10 +4,10 @@ class Reject_talent_by_client_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('event_model');
-		$this->load->model('mail_model');
-		$this->load->model('talent_model');
-		$this->load->model('variableconfig_model');
+		$this->load->model('webservice/event_model','event_model');
+		$this->load->model('webservice/mail_model','mail_model');
+		$this->load->model('webservice/talent_model','talent_model');
+		$this->load->model('webservice/variableconfig_model','variableconfig_model');
 	}
 	
 	

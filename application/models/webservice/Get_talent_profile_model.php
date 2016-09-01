@@ -4,8 +4,8 @@ class Get_talent_profile_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct(); 
-		$this->load->model('review_model');
-		$this->load->model('event_model');
+		$this->load->model('webservice/review_model','review_model');
+		$this->load->model('webservice/event_model','event_model');
 	}
 	
 	

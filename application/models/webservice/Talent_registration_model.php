@@ -4,8 +4,8 @@ class Talent_registration_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('mail_model');
-		$this->load->model('agent_model');
+		$this->load->model('webservice/mail_model','mail_model');
+		$this->load->model('webservice/agent_model','agent_model');
 		$this->load->library('encrypt');
 	}
 	

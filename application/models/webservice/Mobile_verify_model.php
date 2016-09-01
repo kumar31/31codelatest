@@ -5,7 +5,7 @@ class Mobile_verify_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('variableconfig_model');
+		$this->load->model('webservice/variableconfig_model','variableconfig_model');
 	
 	}
 	

@@ -4,7 +4,7 @@ class Talent_account_close_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('talent_model');
+		$this->load->model('webservice/talent_model','talent_model');
 	}
 	
 	

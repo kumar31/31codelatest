@@ -4,7 +4,7 @@ class Talent_update_password_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('talent_model');
+		$this->load->model('webservice/talent_model','talent_model');
 		$this->load->library('encrypt');
 	}
 	

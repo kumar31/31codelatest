@@ -7,7 +7,7 @@ class Forgotpassword_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('mail_model');
+		$this->load->model('webservice/mail_model','mail_model');
 	}
 	
 	function index(){
