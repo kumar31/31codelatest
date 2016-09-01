@@ -634,8 +634,15 @@ include('reg_header.php'); ?>
 			
 			if($("#already").is(':checked')){
 				$("#agreemessagei9").hide();
-				$("#agreemessagew4").hide(); 
-				reg();
+				$("#agreemessagew4").hide();
+				var agency = $( "#agency option:selected" ).val(); 
+				if(agency == 0) {
+					var agreemessage = "You must select agency";
+				   $("#agreemessage").text(agreemessage);
+				}
+				else {
+					reg();
+				}				
 			}
 			else
 			{		
