@@ -152,7 +152,7 @@ include('talent_header.php'); ?>
 		var talent_id = "<?php echo $talent_id;  ?>";
 		var type = 2;
 			
-			var url = '<?php echo $webserviceurl; ?>index.php/mobile_verify';
+			var url = '<?php echo $webserviceurl; ?>mobile_verify';
 			
 			$.ajax({
 				'type' : 'POST',
@@ -184,7 +184,7 @@ include('talent_header.php'); ?>
 		var type = 2;
 		var code = $("#code").val();
 			
-			var url = '<?php echo $webserviceurl; ?>index.php/mobile_number_check';
+			var url = '<?php echo $webserviceurl; ?>mobile_number_check';
 			
 			$.ajax({
 				'type' : 'POST',
@@ -224,7 +224,7 @@ include('talent_header.php'); ?>
 		var email = "<?php echo $talent_profile[0]['email']; ?>"; 
 		var first_name = "<?php echo $talent_profile[0]['first_name']; ?>"; 
 			
-			var url = '<?php echo $webserviceurl; ?>index.php/talent_email_verify';
+			var url = '<?php echo $webserviceurl; ?>talent_email_verify';
 			
 			$.ajax({
 				'type' : 'POST',

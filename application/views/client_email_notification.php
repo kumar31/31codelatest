@@ -82,7 +82,7 @@ include('client_header.php'); ?>
 			var email_frequency = $( "#emailfrequency option:selected" ).text(); 
 			var client_id = <?php echo $client_profile[0]['client_id']; ?>; 
 			
-				var url = '<?php echo $webserviceurl; ?>index.php/update_emailnotification_client';
+				var url = '<?php echo $webserviceurl; ?>update_emailnotification_client';
 				
 				$.ajax({
 					'type' : 'POST',

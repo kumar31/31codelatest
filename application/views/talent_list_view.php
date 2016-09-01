@@ -192,7 +192,7 @@ foreach($blogs as $key=>$val)
 		var talent_id = talentid; 
 		var client_id = <?php echo $client_id; ?>; 
 			
-			var url = '<?php echo $webserviceurl; ?>index.php/add_talents';
+			var url = '<?php echo $webserviceurl; ?>add_talents';
 			
 			$.ajax({
 				'type' : 'POST',
@@ -214,7 +214,7 @@ foreach($blogs as $key=>$val)
 		var talent_id = talent_id; 
 		var client_id = <?php echo $client_id; ?>; 
 			
-			var url = '<?php echo $webserviceurl; ?>index.php/uncheck_talents';
+			var url = '<?php echo $webserviceurl; ?>uncheck_talents';
 			
 			$.ajax({
 				'type' : 'POST',

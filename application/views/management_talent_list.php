@@ -457,7 +457,7 @@ foreach($events as $val)
 			}
 		//alert(agent_id); die;
 		
-			var url = '<?php echo $webserviceurl; ?>index.php/talent_checkout';
+			var url = '<?php echo $webserviceurl; ?>talent_checkout';
 			
 			$.ajax({
 				'type' : 'POST',
@@ -561,7 +561,7 @@ foreach($events as $val)
 				var agent_id = agent_id; 
 			}
 			
-			var url = '<?php echo $webserviceurl; ?>index.php/talent_checkin';
+			var url = '<?php echo $webserviceurl; ?>talent_checkin';
 			//alert(talent_id);alert(event_id);alert(client_id);alert(agent_id);alert(url); die;
 			$.ajax({
 				'type' : 'POST',

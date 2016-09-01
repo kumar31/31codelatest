@@ -93,7 +93,7 @@ include('client_header.php'); ?>
 			var new_password = $("#new_password").val();
 			var client_id = <?php echo $client_profile[0]['client_id']; ?>; 
 			
-				var url = '<?php echo $webserviceurl; ?>index.php/client_update_password';
+				var url = '<?php echo $webserviceurl; ?>client_update_password';
 				
 				$.ajax({
 					'type' : 'POST',

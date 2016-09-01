@@ -204,7 +204,7 @@ $is_advance_paid = $event_detail[0]['is_advance_paid'];
 			var client_id = <?php echo $myuser_id; ?>; 
 			var event_id = <?php echo $event_detail[0]['event_id']; ?>; 
 			
-				var url = '<?php echo $webserviceurl; ?>index.php/launch_event';
+				var url = '<?php echo $webserviceurl; ?>launch_event';
 				
 				$.ajax({
 					'type' : 'POST',

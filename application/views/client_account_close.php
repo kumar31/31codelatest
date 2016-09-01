@@ -76,7 +76,7 @@ include('client_header.php'); ?>
 		function close(){
 			var client_id = <?php echo $client_profile[0]['client_id']; ?>; 
 			
-				var url = '<?php echo $webserviceurl; ?>index.php/client_account_close';
+				var url = '<?php echo $webserviceurl; ?>client_account_close';
 				
 				$.ajax({
 					'type' : 'POST',

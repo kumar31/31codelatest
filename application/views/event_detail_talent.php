@@ -297,7 +297,7 @@ include('talent_header.php'); ?>
 		var talent_id = "<?php echo $talent_id;  ?>"; 
 		var event_id = textbox_val; 
 			
-			var url = '<?php echo $webserviceurl; ?>index.php/talent_apply_event';
+			var url = '<?php echo $webserviceurl; ?>talent_apply_event';
 			
 			$.ajax({
 				'type' : 'POST',

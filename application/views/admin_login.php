@@ -138,7 +138,7 @@
 		var username = $("#username").val();
 		var password = $("#password").val();
 		
-			var url = '<?php echo $webserviceurl; ?>index.php/admin_login';
+			var url = '<?php echo $webserviceurl; ?>admin_login';
 			
 			$.ajax({
 				'type' : 'POST',

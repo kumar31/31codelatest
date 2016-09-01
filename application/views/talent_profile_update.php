@@ -520,7 +520,7 @@ include('talent_header.php'); ?>
 				var gender = $("input[name='gender']:checked").val();
 			}
 			
-				var url = '<?php echo $webserviceurl; ?>index.php/talent_profile_update';
+				var url = '<?php echo $webserviceurl; ?>talent_profile_update';
 				
 				$.ajax({
 					'type' : 'POST',

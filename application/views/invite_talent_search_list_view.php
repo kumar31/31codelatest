@@ -223,7 +223,7 @@ foreach($blogs as $key=>$val)
 				var agent_id = agent_id; 
 			}
 		
-			var url = '<?php echo $webserviceurl; ?>index.php/invite_talent';
+			var url = '<?php echo $webserviceurl; ?>invite_talent';
 			
 			$.ajax({
 				'type' : 'POST',

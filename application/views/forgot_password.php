@@ -106,7 +106,7 @@ include('reg_header.php'); ?>
 				var usertype = $("input[name='user']:checked").val();
 			}
 		
-			var url = '<?php echo $webserviceurl; ?>index.php/forgotpassword';
+			var url = '<?php echo $webserviceurl; ?>forgotpassword';
 			
 			$.ajax({
 				'type' : 'POST',

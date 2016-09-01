@@ -576,7 +576,7 @@ include('client_header.php'); ?>
 				var open_to_all = $("input[name='open_to_all']:checked").val();
 			}
 			
-				var url = '<?php echo $webserviceurl; ?>index.php/update_event';
+				var url = '<?php echo $webserviceurl; ?>update_event';
 				
 				$.ajax({
 					'type' : 'POST',

@@ -82,7 +82,7 @@ include('talent_header.php'); ?>
 			var email_frequency = $( "#emailfrequency option:selected" ).text(); 
 			var talent_id = <?php echo $talent_profile[0]['talent_id']; ?>; 
 			
-				var url = '<?php echo $webserviceurl; ?>index.php/update_emailnotification_talent';
+				var url = '<?php echo $webserviceurl; ?>update_emailnotification_talent';
 				
 				$.ajax({
 					'type' : 'POST',

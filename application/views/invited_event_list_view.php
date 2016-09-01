@@ -230,7 +230,7 @@ foreach($invited_events as $key=>$val)
 		var talent_id = "<?php echo $talent_id;  ?>";
 		var event_id = textbox_val;
 			
-			var url = '<?php echo $webserviceurl; ?>index.php/accept_event_by_talent';
+			var url = '<?php echo $webserviceurl; ?>accept_event_by_talent';
 			
 			$.ajax({
 				'type' : 'POST',
@@ -278,7 +278,7 @@ foreach($invited_events as $key=>$val)
 		var event_id = textbox_val2;
 		var reason = $("#rejectreason").val();
 			
-			var url = '<?php echo $webserviceurl; ?>index.php/reject_event_by_talent';
+			var url = '<?php echo $webserviceurl; ?>reject_event_by_talent';
 			
 			$.ajax({
 				'type' : 'POST',

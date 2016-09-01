@@ -188,7 +188,7 @@ foreach($blogs as $key=>$val)
 		var event_id = <?php echo $event_id; ?>; 
 		var client_id = <?php echo $myuser_id; ?>; 
 			
-			var url = '<?php echo $webserviceurl; ?>index.php/cancel_pending_invite_client';
+			var url = '<?php echo $webserviceurl; ?>cancel_pending_invite_client';
 			
 			$.ajax({
 				'type' : 'POST',

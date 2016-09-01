@@ -93,7 +93,7 @@ include('talent_header.php'); ?>
 			var new_password = $("#new_password").val();
 			var talent_id = <?php echo $talent_profile[0]['talent_id']; ?>; 
 			
-				var url = '<?php echo $webserviceurl; ?>index.php/talent_update_password';
+				var url = '<?php echo $webserviceurl; ?>talent_update_password';
 				
 				$.ajax({
 					'type' : 'POST',

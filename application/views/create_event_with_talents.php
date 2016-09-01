@@ -791,7 +791,7 @@ Changes to this Agreement and the Service</p>
 				var open_to_all = $("input[name='open_to_all']:checked").val();
 			}
 			
-				var url = '<?php echo $webserviceurl; ?>index.php/create_event';
+				var url = '<?php echo $webserviceurl; ?>create_event';
 				
 				$.ajax({
 					'type' : 'POST',
@@ -834,7 +834,7 @@ Changes to this Agreement and the Service</p>
 			var event_id = event_id; 
 			var client_id = <?php echo $client_id; ?>; 
 				
-				var url = '<?php echo $webserviceurl; ?>index.php/invite_added_talents';
+				var url = '<?php echo $webserviceurl; ?>invite_added_talents';
 				
 				$.ajax({
 					'type' : 'POST',

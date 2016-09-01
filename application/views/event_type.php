@@ -202,7 +202,7 @@ include('admin_header.php'); ?>
 			var eventtypeid = $("#eventtypeid").val();
 			var adminid = "<?php echo $adminid; ?>";
 			//alert(name);alert(percentage);alert(eventtypeid);alert(adminid); die;
-				var url = '<?php echo $webserviceurl; ?>index.php/update_event_type';
+				var url = '<?php echo $webserviceurl; ?>update_event_type';
 				
 				$.ajax({
 					'type' : 'POST',
@@ -233,7 +233,7 @@ include('admin_header.php'); ?>
 			var eventtypeid = eventtypeid;
 			var adminid = "<?php echo $adminid; ?>";
 			//alert(agentid);alert(adminid); die;
-				var url = '<?php echo $webserviceurl; ?>index.php/eventtype_active_inactive';
+				var url = '<?php echo $webserviceurl; ?>eventtype_active_inactive';
 				
 				$.ajax({
 					'type' : 'POST',
@@ -263,7 +263,7 @@ include('admin_header.php'); ?>
 			var name = $("#aname").val();
 			var percentage = $("#aper").val();
 			
-				var url = '<?php echo $webserviceurl; ?>index.php/create_event_type';
+				var url = '<?php echo $webserviceurl; ?>create_event_type';
 				
 				$.ajax({
 					'type' : 'POST',

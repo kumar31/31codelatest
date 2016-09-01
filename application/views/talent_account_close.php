@@ -76,7 +76,7 @@ include('talent_header.php'); ?>
 		function close(){
 			var talent_id = <?php echo $talent_profile[0]['talent_id']; ?>; 
 			
-				var url = '<?php echo $webserviceurl; ?>index.php/talent_account_close';
+				var url = '<?php echo $webserviceurl; ?>talent_account_close';
 				
 				$.ajax({
 					'type' : 'POST',

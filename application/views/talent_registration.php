@@ -710,7 +710,7 @@ include('reg_header.php'); ?>
 				var reg_type = $("input[name='reg_type']:checked").val();
 			}
 			
-				var url = '<?php echo $webserviceurl; ?>index.php/talent_registration';
+				var url = '<?php echo $webserviceurl; ?>talent_registration';
 				
 				$.ajax({
 					'type' : 'POST',

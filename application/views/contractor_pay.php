@@ -155,7 +155,7 @@ include('admin_header.php'); ?>
 			var talent_id = $("#talentid").val();
 			
 			//alert(name);alert(email);alert(password);alert(percentage);alert(agentid);alert(adminid); die;
-				var url = '<?php echo $webserviceurl; ?>index.php/contractor_pay_update';
+				var url = '<?php echo $webserviceurl; ?>contractor_pay_update';
 				
 				$.ajax({
 					'type' : 'POST',

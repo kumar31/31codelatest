@@ -269,7 +269,7 @@ $(document).ready(function() {
 			var client_id = <?php echo $myuser_id; ?>; 
 			var event_id = <?php echo $event_detail[0]['event_id']; ?>; 
 			
-				var url = '<?php echo $webserviceurl; ?>index.php/delete_event';
+				var url = '<?php echo $webserviceurl; ?>delete_event';
 				
 				$.ajax({
 					'type' : 'POST',
@@ -299,7 +299,7 @@ $(document).ready(function() {
 			var client_id = <?php echo $myuser_id; ?>; 
 			var event_id = <?php echo $event_detail[0]['event_id']; ?>; 
 			
-				var url = '<?php echo $webserviceurl; ?>index.php/event_close';
+				var url = '<?php echo $webserviceurl; ?>event_close';
 				
 				$.ajax({
 					'type' : 'POST',

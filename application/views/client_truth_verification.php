@@ -157,7 +157,7 @@ include('client_header.php'); ?>
 		var client_id = "<?php echo $myuser_id;  ?>";
 		var type = 1;
 			
-			var url = '<?php echo $webserviceurl; ?>index.php/mobile_verify';
+			var url = '<?php echo $webserviceurl; ?>mobile_verify';
 			
 			$.ajax({
 				'type' : 'POST',
@@ -189,7 +189,7 @@ include('client_header.php'); ?>
 		var type = 1;
 		var code = $("#code").val();
 			
-			var url = '<?php echo $webserviceurl; ?>index.php/mobile_number_check';
+			var url = '<?php echo $webserviceurl; ?>mobile_number_check';
 			
 			$.ajax({
 				'type' : 'POST',
@@ -229,7 +229,7 @@ include('client_header.php'); ?>
 		var email = "<?php echo $client_profile[0]['email']; ?>"; 
 		var first_name = "<?php echo $client_profile[0]['first_name']; ?>"; 
 			
-			var url = '<?php echo $webserviceurl; ?>index.php/email_verify';
+			var url = '<?php echo $webserviceurl; ?>email_verify';
 			
 			$.ajax({
 				'type' : 'POST',

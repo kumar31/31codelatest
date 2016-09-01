@@ -306,7 +306,7 @@ include('admin_header.php'); ?>
 			var agentid = $("#agentid").val();
 			var adminid = "<?php echo $adminid; ?>";
 			//alert(name);alert(email);alert(password);alert(percentage);alert(agentid);alert(adminid); die;
-				var url = '<?php echo $webserviceurl; ?>index.php/agent_update';
+				var url = '<?php echo $webserviceurl; ?>agent_update';
 				
 				$.ajax({
 					'type' : 'POST',
@@ -337,7 +337,7 @@ include('admin_header.php'); ?>
 			var agentid = agentid;
 			var adminid = "<?php echo $adminid; ?>";
 			//alert(agentid);alert(adminid); die;
-				var url = '<?php echo $webserviceurl; ?>index.php/agent_active_inactive';
+				var url = '<?php echo $webserviceurl; ?>agent_active_inactive';
 				
 				$.ajax({
 					'type' : 'POST',
@@ -371,7 +371,7 @@ include('admin_header.php'); ?>
 			var address = $("#aaddress").val();
 			var outfit_fee = $("#aoutfitper").val();
 			
-				var url = '<?php echo $webserviceurl; ?>index.php/create_agent';
+				var url = '<?php echo $webserviceurl; ?>create_agent';
 				
 				$.ajax({
 					'type' : 'POST',

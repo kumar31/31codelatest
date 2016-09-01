@@ -267,7 +267,7 @@ foreach($blogs as $key=>$val)
 		var event_id = <?php echo $event_id; ?>; 
 		var client_id = <?php echo $myuser_id; ?>; 
 			
-			var url = '<?php echo $webserviceurl; ?>index.php/hire_by_client';
+			var url = '<?php echo $webserviceurl; ?>hire_by_client';
 			
 			$.ajax({
 				'type' : 'POST',
@@ -313,7 +313,7 @@ foreach($blogs as $key=>$val)
 		var client_id = <?php echo $myuser_id; ?>; 
 		var reason = $("#rejectreason").val();
 			
-			var url = '<?php echo $webserviceurl; ?>index.php/reject_talent_by_client';
+			var url = '<?php echo $webserviceurl; ?>reject_talent_by_client';
 			
 			$.ajax({
 				'type' : 'POST',

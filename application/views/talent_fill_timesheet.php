@@ -285,7 +285,7 @@ include('talent_header.php'); ?>
 			var number_of_hours = $("#total_hrs").val(); 
 			var number_of_minutes = $("#total_mins").val(); 
 			
-				var url = '<?php echo $webserviceurl; ?>index.php/talent_update_timesheet';
+				var url = '<?php echo $webserviceurl; ?>talent_update_timesheet';
 				
 				$.ajax({
 					'type' : 'POST',
@@ -358,7 +358,7 @@ include('talent_header.php'); ?>
 				var number_of_minutes = $( "#minutes option:selected" ).val(); 
 			}*/
 			
-				var url = '<?php echo $webserviceurl; ?>index.php/talent_update_timesheet_recheck';
+				var url = '<?php echo $webserviceurl; ?>talent_update_timesheet_recheck';
 				
 				$.ajax({
 					'type' : 'POST',
@@ -399,7 +399,7 @@ include('talent_header.php'); ?>
 			var event_id = event_id; 
 			var client_id = client_id; 
 				
-				var url = '<?php echo $webserviceurl; ?>index.php/payment_status';
+				var url = '<?php echo $webserviceurl; ?>payment_status';
 				
 				$.ajax({
 					'type' : 'POST',

@@ -156,7 +156,7 @@ include('admin_header.php'); ?>
 			var stripe_fee = $("#strper").val();
 			var agent_fee = $("#agentper").val();
 			//alert(pay_id);alert(per_hour);alert(outfit_fee);alert(stripe_fee);alert(agent_fee); die;
-				var url = '<?php echo $webserviceurl; ?>index.php/update_admin_settings';
+				var url = '<?php echo $webserviceurl; ?>update_admin_settings';
 				
 				$.ajax({
 					'type' : 'POST',

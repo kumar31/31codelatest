@@ -233,7 +233,7 @@ include('client_header.php');
 			var lng = $("#lng").val();
 			var client_id = <?php echo $client_profile[0]['client_id']; ?>; 
 			
-				var url = '<?php echo $webserviceurl; ?>index.php/client_profile_update';
+				var url = '<?php echo $webserviceurl; ?>client_profile_update';
 				
 				$.ajax({
 					'type' : 'POST',

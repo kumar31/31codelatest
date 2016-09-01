@@ -353,7 +353,7 @@ include('reg_header.php'); ?>
 				var gender = $("input[name='gender']:checked").val();
 			}
 			
-				var url = '<?php echo $webserviceurl; ?>index.php/client_registration';
+				var url = '<?php echo $webserviceurl; ?>client_registration';
 				
 				$.ajax({
 					'type' : 'POST',
