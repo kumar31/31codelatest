@@ -23,7 +23,7 @@ a:hover, a:focus {
 }
 </style>
 <?php
-print_r($blogs);
+
 foreach($blogs as $key=>$val)
 {
 	$this->db->select('*');		
