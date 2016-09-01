@@ -19,7 +19,16 @@ $(document).ready(function() {
 	var track_load = 0; //total loaded record group(s)
 	var loading  = false; //to prevents multipal ajax loads
 	var total_groups = <?=$total_groups;?>; //total record group(s)
+	var get_total_rows = <?=$get_total_rows;?>;
 	
+	if(get_total_rows>0)
+	{
+		$('.animation_image').show(); 
+	}
+	else{
+		
+		$('.animation_image').hide();
+	}
 	$('#results').load("<?php echo base_url();?>index.php/management/getblogdata/<?php echo $event_id ?>", {'group_no':track_load}, function() {track_load++;}); //load first group
 	
 	$(window).scroll(function() { //detect page scroll
@@ -153,7 +162,9 @@ $(document).ready(function() {
 					<div class="" id="results">
 						
 					</div>
-					
+					<div class="animation_image"  align="center" style="display:none">						
+							<img src="<?php echo base_url();?>css/ajax-loader.gif" style="width:60px; height:60px;">						
+					</div>
 				</div>
                 <!-- End of single person -->
                 

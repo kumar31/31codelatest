@@ -4,7 +4,7 @@
 		$stripeurl = $variableconfig->stripeurl(); 
  ?>
 <div id="masonryWr" class="row" >
-<div style="display: none;" class="se-pre-con"></div>
+
 <?php
 date_default_timezone_set("UTC");
 //print"<pre>";
