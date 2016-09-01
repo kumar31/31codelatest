@@ -19,6 +19,7 @@ include('client_header.php');
 	include('settings_menu.php'); ?>
       <div class="col-sm-8 whiteBG invitebox topmargin30 ">
         <div class="col-md-6 col-md-offset-3">
+		<h5 id="alertmsg" class="error_msg"></h5>
 		<form target="_top" data-toggle="validator" id="myForm" action=""> 
 		<div class="prepend-top clearfix form-group">
             <div class="row">
