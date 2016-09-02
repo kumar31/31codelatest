@@ -81,7 +81,7 @@ include('talent_header.php');
 	include('talent_footer.php'); ?>
   </body>
   <script>
-	  function addagent(){
+	  function sendmail(){
 			var email = $("#email").val();
 			var fname = $("#fname").val();
 			var lname = $("#lname").val();
