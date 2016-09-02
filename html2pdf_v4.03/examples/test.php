@@ -2,7 +2,7 @@
 
 
 
-
+error_reporting(E_ALL);
 
 $AdID=$_GET['event_id'];
 //$currency=$_GET['currency'];	
