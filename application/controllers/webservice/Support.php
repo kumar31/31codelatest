@@ -47,9 +47,9 @@ class Support extends REST_Controller {
 					else
 					{
 						
-						$this->form_validation->set_rules('email', 'email', 'trim|required');
-						$this->form_validation->set_rules('fname', 'fname', 'trim|required');
-						$this->form_validation->set_rules('lname', 'lname', 'trim|required');
+						$this->form_validation->set_rules('email', 'email', 'trim|required|valid_email');
+						$this->form_validation->set_rules('fname', 'first name', 'trim|required');
+						$this->form_validation->set_rules('lname', 'last name', 'trim|required');
 						$this->form_validation->set_rules('message', 'message', 'trim|required');
 						
 						if($this->form_validation->run() == FALSE)
