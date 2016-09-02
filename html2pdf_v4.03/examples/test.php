@@ -2,7 +2,7 @@
 
 
 
-error_reporting(E_ALL);
+
 
 $AdID=$_GET['event_id'];
 //$currency=$_GET['currency'];	
@@ -19,11 +19,10 @@ $AdID=$_GET['event_id'];
  * isset($_GET['vuehtml']) is not mandatory
  * it allow to display the result in the HTML format
  */
-  
     ob_start();
-   include 'res/test.php';
-	 echo "hi"; die; 
-    $content = ob_get_clean(); 
+   
+	include(dirname(__FILE__).'/res/adv.php'); echo "hi"; die;
+    $content = ob_get_clean();
 
     // convert in PDF
     require_once(dirname(__FILE__).'/../html2pdf.class.php');
@@ -32,7 +31,7 @@ $AdID=$_GET['event_id'];
         $html2pdf = new HTML2PDF('P', 'A4', 'fr');
 //      $html2pdf->setModeDebug();
         $html2pdf->setDefaultFont('Arial');
-        $html2pdf->writeHTML($content);
+        $html2pdf->writeHTML($content, isset($_GET['vuehtml'],$AdID));
 		$my_string = substr(str_shuffle(MD5(microtime())), 0, 6); 
        // $html2pdf->Output("invoice.pdf"); 
 		$path='../../invoice/adv'.$AdID.'.pdf';
