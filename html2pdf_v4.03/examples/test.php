@@ -22,7 +22,7 @@ $AdID=$_GET['event_id'];
   
     ob_start();
    
-	include('res/test.php'); echo "hi"; die; 
+	require_once('res/test.php'); echo "hi"; die; 
     $content = ob_get_clean(); 
 
     // convert in PDF
