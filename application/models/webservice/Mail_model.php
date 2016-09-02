@@ -23,7 +23,7 @@ class Mail_model extends CI_Model {
 	}
 	
 	function send($to_email,$subject,$message){
-	echo "hi"; die;
+	
 		$mail             = new PHPMailer();
     	$body             = $message;
     	$body             = eregi_replace("[\]",'',$body);
