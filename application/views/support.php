@@ -68,7 +68,7 @@ include('client_header.php');
                 <textarea class="form-control" rows="5" id="comment" name="message"></textarea>
               </div>    
               <div class="col-xs-12 gutter-bottom form-group">
-                <button type="submit" class="btn btn-danger btn-lg pull-right">Submit
+                <button type="button" onclick="sendmail();" class="btn btn-danger btn-lg pull-right">Submit
                 </button>
               </div>  
             </div>
