@@ -20,7 +20,7 @@ class Support_model extends CI_Model {
 		$subject = "Outfit - Need Support";
 		$message = "<p>Email: ".$email." <br> First name: ".$fname." <br>Last name: ".$lname." <br> Message: ".$msg."</p>";
 		
-		$to_email = "car3chan@gmail.com";
+		$to_email = "tobias@outfitstaff.com";
 		$this->mail_model->send($to_email,$subject,$message); 
 		
 	}
