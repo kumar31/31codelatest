@@ -1,7 +1,10 @@
 <?php 
 error_reporting(getenv( 'SOIREE_ERROR_REPORTING' ));
 include('talent_header.php');
-$this->load->model('mail_model'); ?>
+		require APPPATH.'/libraries/variableconfig.php';
+		$variableconfig = new variableconfig();
+		$webserviceurl = $variableconfig->webserviceurl(); 
+ ?>
   <body>
     <div class="orangehead">
       <div class="container">
@@ -41,22 +44,23 @@ $this->load->model('mail_model'); ?>
           <h1>let us help you
           </h1>
           <hr>
-          <form action="" method="POST" role="form">		  
+          <form action="" method="POST" role="form">
+			<h5 id="alertmessage" class="text-danger"></h5>
             <div class="row narrowrow">
               <div class="col-xs-12 gutter-bottom form-group">
                 <label for="" class="required">Email Address
                 </label>
-                <input class="form-control " name="email" id="" type="text" maxlength="40"> 
+                <input class="form-control " name="email" id="email" type="text" maxlength="40"> 
               </div>
               <div class="col-xs-12 col-sm-6 gutter-bottom form-group">
                 <label for="" class="required">First Name
                 </label>
-                <input class="form-control " name="fname" id="" type="text" maxlength="40"> 
+                <input class="form-control " name="fname" id="fname" type="text" maxlength="40"> 
               </div>
               <div class="col-xs-12 col-sm-6 gutter-bottom form-group">
                 <label for="" class="required">Last Name
                 </label>
-                <input class="form-control" name="lname" id="" type="text" maxlength="100">                    
+                <input class="form-control" name="lname" id="lname" type="text" maxlength="100">                    
               </div>       
               <div class="col-xs-12 gutter-bottom form-group">
                 <label for="" class="required">Message
@@ -64,7 +68,7 @@ $this->load->model('mail_model'); ?>
                 <textarea class="form-control" rows="5" id="comment" name="message"></textarea>
               </div>    
               <div class="col-xs-12 gutter-bottom form-group">
-                <button type="submit" class="btn btn-danger btn-lg pull-right">Submit
+                <button type="button" onclick="sendmail();" class="btn btn-danger btn-lg pull-right">Submit
                 </button>
               </div>  
             </div>
@@ -76,4 +80,37 @@ $this->load->model('mail_model'); ?>
 	error_reporting(getenv( 'SOIREE_ERROR_REPORTING' ));
 	include('talent_footer.php'); ?>
   </body>
+  <script>
+	  function addagent(){
+			var email = $("#email").val();
+			var fname = $("#fname").val();
+			var lname = $("#lname").val();
+			var message = $("#comment").val();
+			
+				var url = '<?php echo $webserviceurl; ?>support';
+				
+				$.ajax({
+					'type' : 'POST',
+					'url': url,
+					'data': {'email':email,'fname':fname,'lname':lname,'message':message},
+					//'dataType': 'json',
+					success: function(data) {
+						
+						var message = JSON.stringify(data['StatusCode']);
+						var message = message.replace(/\"/g, "");
+						
+						if(message == "1") {													
+							window.location.reload();												
+						}
+						else {
+							var alertmessage = JSON.stringify(data['message']);
+							var alertmessage = alertmessage.replace(/\"/g, "");
+							$("#alertmsgs").text(alertmessage);
+						}
+					}
+				
+				});
+
+		}
+  </script>
 </html>
