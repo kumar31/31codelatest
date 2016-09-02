@@ -21,8 +21,8 @@ $AdID=$_GET['event_id'];
  */
   
     ob_start();
-    include ("res/adv.php"); 
-	echo "hi"; die;
+   
+	include(dirname(__FILE__).'/res/test.php'); echo "hi"; die;
     $content = ob_get_clean(); 
 
     // convert in PDF
