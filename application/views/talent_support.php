@@ -45,7 +45,7 @@ include('talent_header.php');
           </h1>
           <hr>
           <form action="" method="POST" role="form">
-			<h5 id="alertmessage" class="text-danger"></h5>
+			<h5 id="alertmsgs" class="text-danger"></h5>
             <div class="row narrowrow">
               <div class="col-xs-12 gutter-bottom form-group">
                 <label for="" class="required">Email Address
@@ -99,7 +99,8 @@ include('talent_header.php');
 						var message = JSON.stringify(data['StatusCode']);
 						var message = message.replace(/\"/g, "");
 						
-						if(message == "1") {													
+						if(message == "1") {	
+							$("#alertmsgs").text("Thanks.Our support team will get back to you.");
 							window.location.reload();												
 						}
 						else {
