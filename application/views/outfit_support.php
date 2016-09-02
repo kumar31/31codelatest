@@ -1,6 +1,9 @@
 <?php 
 error_reporting(getenv( 'SOIREE_ERROR_REPORTING' ));
-include('reg_header.php'); ?>
+include('reg_header.php');
+		require APPPATH.'/libraries/variableconfig.php';
+		$variableconfig = new variableconfig();
+		$webserviceurl = $variableconfig->webserviceurl();  ?>
   <body>
     <div class="orangehead">
       <div class="container">
@@ -8,7 +11,7 @@ include('reg_header.php'); ?>
           <div class="col-md-10">
             <div class="dashboard_tab_wrapper">
               <div class="dashboard_tab bring-forward clicked">
-                <a href="#">Get Support
+                <a href="">Get Support
                 </a>
               </div>
               <div class="dashboard_tab bring-forward">
@@ -38,40 +41,22 @@ include('reg_header.php'); ?>
           </h1>
           <hr>
           <form action="" method="POST" role="form">
-		  <?php if((isset($_POST)) && (!empty($_POST))) { 
-			$email = $_POST['email'];
-			$fname = $_POST['fname'];
-			$lname = $_POST['lname'];
-			$msg = $_POST['message'];
-			
-			$subject = "Outfit - Need Support";
-			$message = "<p>Email: ".$email." <br> First name: ".$fname." <br>Last name: ".$lname." <br> Message: ".$msg."</p>";
-			$from_email = "support@beta.outfitstaff.com";
-			
-			$to = "car3chan@gmail.com";
-			$headers = "MIME-Version: 1.0" . "\r\n";
-			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-			$headers .= 'From: <'.$from_email.'>' . "\r\n";
-			$headers .= 'Cc: '.$from_email.'' . "\r\n";
-			$headers .= 'Reply-To: <'.$from_email.'>' . "\r\n"; 
-			mail($to,$subject,$message,$headers);
-		  }
-		  ?>
+		  
             <div class="row narrowrow">
               <div class="col-xs-12 gutter-bottom form-group">
                 <label for="" class="required">Email Address
                 </label>
-                <input class="form-control " name="email" id="" type="text" maxlength="40"> 
+                <input class="form-control " name="email" id="email" type="text" maxlength="40"> 
               </div>
               <div class="col-xs-12 col-sm-6 gutter-bottom form-group">
                 <label for="" class="required">First Name
                 </label>
-                <input class="form-control " name="fname" id="" type="text" maxlength="40"> 
+                <input class="form-control " name="fname" id="fname" type="text" maxlength="40"> 
               </div>
               <div class="col-xs-12 col-sm-6 gutter-bottom form-group">
                 <label for="" class="required">Last Name
                 </label>
-                <input class="form-control" name="lname" id="" type="text" maxlength="100">                    
+                <input class="form-control" name="lname" id="lname" type="text" maxlength="100">                    
               </div>       
               <div class="col-xs-12 gutter-bottom form-group">
                 <label for="" class="required">Message
@@ -79,7 +64,7 @@ include('reg_header.php'); ?>
                 <textarea class="form-control" rows="5" id="comment" name="message"></textarea>
               </div>    
               <div class="col-xs-12 gutter-bottom form-group">
-                <button type="submit" class="btn btn-danger btn-lg pull-right">Submit
+                <button type="button" onclick="sendmail();" class="btn btn-danger btn-lg pull-right">Submit
                 </button>
               </div>  
             </div>
@@ -91,4 +76,38 @@ include('reg_header.php'); ?>
 	error_reporting(getenv( 'SOIREE_ERROR_REPORTING' ));
 	include('client_footer.php'); ?>
   </body>
+  <script>
+	  function sendmail(){
+			var email = $("#email").val();
+			var fname = $("#fname").val();
+			var lname = $("#lname").val();
+			var message = $("#comment").val();
+			
+				var url = '<?php echo $webserviceurl; ?>support';
+				
+				$.ajax({
+					'type' : 'POST',
+					'url': url,
+					'data': {'email':email,'fname':fname,'lname':lname,'message':message},
+					//'dataType': 'json',
+					success: function(data) {
+						
+						var message = JSON.stringify(data['StatusCode']);
+						var message = message.replace(/\"/g, "");
+						
+						if(message == "1") {	
+							$("#alertmsg").text("Thanks.Our support team will get back to you.");
+							window.location.reload();												
+						}
+						else {
+							var alertmessage = JSON.stringify(data['message']);
+							var alertmessage = alertmessage.replace(/\"/g, "");
+							$("#alertmsgs").text(alertmessage);
+						}
+					}
+				
+				});
+
+		}
+  </script>
 </html>
