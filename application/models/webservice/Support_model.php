@@ -4,7 +4,7 @@ class Support_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();
-		
+		$this->load->model('webservice/mail_model','mail_model');
 	}
 	
 	
@@ -12,15 +12,17 @@ class Support_model extends CI_Model {
 	function index()
 	{
 		
-		$data = array(
+		$email = $_POST['email'];
+		$fname = $_POST['fname'];
+		$lname = $_POST['lname'];
+		$msg = $_POST['message'];
 		
-			'email' 				=> $_POST['email'],
-			'message' 				=> $_POST['message']
-		);
+		$subject = "Outfit - Need Support";
+		$message = "<p>Email: ".$email." <br> First name: ".$fname." <br>Last name: ".$lname." <br> Message: ".$msg."</p>";
 		
+		$to_email = "car3chan@gmail.com";
+		$this->mail_model->send($to_email,$subject,$message); 
 		
-		$this->db->insert('support',$data);
-	
 	}
 	
 }

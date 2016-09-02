@@ -1,6 +1,7 @@
 <?php 
 error_reporting(getenv( 'SOIREE_ERROR_REPORTING' ));
-include('talent_header.php'); ?>
+include('talent_header.php');
+$this->load->model('mail_model'); ?>
   <body>
     <div class="orangehead">
       <div class="container">
@@ -40,22 +41,7 @@ include('talent_header.php'); ?>
           <h1>let us help you
           </h1>
           <hr>
-          <form action="" method="POST" role="form">
-		  <?php if((isset($_POST)) && (!empty($_POST))) { 
-			$email = $_POST['email'];
-			$fname = $_POST['fname'];
-			$lname = $_POST['lname'];
-			$msg = $_POST['message'];
-			
-			$subject = "Outfit - Need Support";
-			$message = "<p>Email: ".$email." <br> First name: ".$fname." <br>Last name: ".$lname." <br> Message: ".$msg."</p>";
-			
-			$to_email = "car3chan@gmail.com";
-			$this->load->model('mail_model');
-			$this->mail_model->email($to_email,$subject,$message); 
-			
-		  }
-		  ?>
+          <form action="" method="POST" role="form">		  
             <div class="row narrowrow">
               <div class="col-xs-12 gutter-bottom form-group">
                 <label for="" class="required">Email Address

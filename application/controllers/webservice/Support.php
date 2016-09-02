@@ -35,7 +35,7 @@ class Support extends REST_Controller {
 					
 					
 					// Empty key checking.
-					$pre_key = array('email','message');
+					$pre_key = array('email','fname','lname','message');
 					
 					$result = $validationandresult->keyvalidation($pre_key);
 					
@@ -48,6 +48,8 @@ class Support extends REST_Controller {
 					{
 						
 						$this->form_validation->set_rules('email', 'email', 'trim|required');
+						$this->form_validation->set_rules('fname', 'fname', 'trim|required');
+						$this->form_validation->set_rules('lname', 'lname', 'trim|required');
 						$this->form_validation->set_rules('message', 'message', 'trim|required');
 						
 						if($this->form_validation->run() == FALSE)
