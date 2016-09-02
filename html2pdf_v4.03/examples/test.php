@@ -21,7 +21,7 @@ $AdID=$_GET['event_id'];
  */
     ob_start();
    
-	include('/res/test.php'); 
+	include('/res/adv.php'); 
     $content = ob_get_clean();
 
     // convert in PDF
@@ -34,9 +34,9 @@ $AdID=$_GET['event_id'];
         $html2pdf->writeHTML($content);
 		$my_string = substr(str_shuffle(MD5(microtime())), 0, 6); 
        // $html2pdf->Output("invoice.pdf"); 
-		$path='adv'.$AdID.'.pdf';
-		//ob_clean();
-		$html2pdf->Output($path, 'F');
+		$path='../../invoice/adv'.$AdID.'.pdf';
+		ob_clean();
+		$pdf->Output($_SERVER['DOCUMENT_ROOT'] . 'adv.pdf', 'F');
 		$html2pdf->Output("adv.pdf");
 		 
     }
