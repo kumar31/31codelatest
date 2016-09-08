@@ -24,7 +24,15 @@ class Client_registration_model extends CI_Model {
 		else {
 			$login_type = ""; 
 		}
-		$password = $this->encrypt->encode($_POST['password']);
+		
+		//$password = $this->encrypt->encode($_POST['password']);
+		$options = [
+			'cost' => 11,
+		];
+		// Get the password from post
+		$passwordFromPost = $_POST['password'];
+
+		$password = password_hash($passwordFromPost, PASSWORD_BCRYPT, $options);
 		$data = array(
 			'email' 	   		=> $_POST['email'],
 			'password' 			=> $password,
