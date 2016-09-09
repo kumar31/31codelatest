@@ -103,7 +103,12 @@ class Agent_login extends REST_Controller {
 		$this->db->from('agent_details');
 		$query = $this->db->get();
 		$results = $query->result_array();
-		$db_password = $this->encrypt->decode($results[0]['password']);
+		$db_password = $results[0]['password'];
+		
+		$intermediateSalt = md5(sha1(getenv( 'SOIREE_PASSWORD_ENCRYPTION' )));
+		$salt = $intermediateSalt;
+		$password =  hash("sha256", $_POST['password'] . $salt);
+			
 			if($db_password == $password) {
 				$result = $results; 
 			}
