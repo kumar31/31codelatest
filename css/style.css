@@ -398,6 +398,13 @@ margin-bottom:17px;
 }
 }
 
+@media(max-width:360px)
+{
+	.list-work {
+		margin-top: 140px;
+	}
+}
+
 .logoo2 {
 	width: 102px;
 	height: 50px;

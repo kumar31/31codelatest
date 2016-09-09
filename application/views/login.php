@@ -276,7 +276,7 @@ payment in a few simple steps.
 		</div>
 		<div class="col-md-2"></div>
 		<div class="col-md-12 text-center">
-		<br><br>
+		
 			<button onclick="location.href = '<?php echo site_url();?>/client_registration';" class="orange-button">CREATE AN EVENT</button><br>
 		</div>
 		</div>
