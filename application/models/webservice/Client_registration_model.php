@@ -22,9 +22,14 @@ class Client_registration_model extends CI_Model {
 			$login_type = "facebook";
 		}
 		else {
-			$login_type = ""; 
+			$login_type = "";
 		}
-		$password = $this->encrypt->encode($_POST['password']); 
+		
+		$intermediateSalt = md5(sha1(getenv( 'SOIREE_PASSWORD_ENCRYPTION' )));
+		$salt = $intermediateSalt;
+		$password =  hash("sha256", $_POST['password'] . $salt);
+		
+		//$password = $this->encrypt->encode($_POST['password']); 
 		$data = array(
 			'email' 	   		=> $_POST['email'],
 			'password' 			=> $password,
