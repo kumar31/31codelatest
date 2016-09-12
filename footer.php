@@ -1,9 +1,5 @@
 
-
-<!-- jQuery  -->
-        <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
-		
-		 <footer class="footer text-right">
+ <footer class="footer text-right">
 				<table width="100%" border="0" cellpadding="2" cellspacing="0" title="Click to Verify - This site chose GeoTrust SSL for secure e-commerce and confidential communications.">
 <tr>
 <td width="135" align="center" valign="top"><script type="text/javascript" src="https://seal.geotrust.com/getgeotrustsslseal?host_name=www.purposegateway.com&amp;size=M&amp;lang=en"></script>
@@ -15,7 +11,8 @@
 				<img src="<?php echo base_url(); ?>assets/images/seclogo.png" style="height: 35px;">&nbsp;&nbsp;<strong>Copyright © 2016 <a href="#">Purpose Financial LLC</a>.</strong> All rights
     reserved.
 </footer>
-
+<!-- jQuery  -->
+        <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/detect.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/fastclick.js"></script>
