@@ -117,11 +117,9 @@ class Login extends REST_Controller {
 			$results = $query->result_array();
 			$db_password = $results[0]['password'];
 			
-			$intermediateSalt = md5(sha1(getenv( 'SOIREE_PASSWORD_ENCRYPTION' )));
-			$salt = $intermediateSalt;
-			$password =  hash("sha256", $_POST['password'] . $salt);
+			$password =  $_POST['password'];
 			
-			if($db_password == $password) {
+			if (password_verify($password, $db_password)) {		
 				$result = $results;
 			} 
 		}
@@ -134,11 +132,9 @@ class Login extends REST_Controller {
 			$results = $query->result_array();
 			$db_password = $results[0]['password'];
 			
-			$intermediateSalt = md5(sha1(getenv( 'SOIREE_PASSWORD_ENCRYPTION' )));
-			$salt = $intermediateSalt;
-			$password =  hash("sha256", $_POST['password'] . $salt);
+			$password =  $_POST['password'];
 			
-			if($db_password == $password) {
+			if (password_verify($password, $db_password)) {	
 				$result = $results;
 			}
 		}
@@ -175,12 +171,10 @@ class Login extends REST_Controller {
 			$query = $this->db->get();
 			$results = $query->result_array();
 			$db_password = $results[0]['password'];
+						
+			$password =  $_POST['password'];
 			
-			$intermediateSalt = md5(sha1(getenv( 'SOIREE_PASSWORD_ENCRYPTION' )));
-			$salt = $intermediateSalt;
-			$password =  hash("sha256", $_POST['password'] . $salt);
-			
-			if($db_password == $password) {
+			if (password_verify($password, $db_password)) {	
 				$result = $results;
 			}
 		}
@@ -194,11 +188,9 @@ class Login extends REST_Controller {
 			$results = $query->result_array();
 			$db_password = $results[0]['password'];
 			
-			$intermediateSalt = md5(sha1(getenv( 'SOIREE_PASSWORD_ENCRYPTION' )));
-			$salt = $intermediateSalt;
-			$password =  hash("sha256", $_POST['password'] . $salt);
+			$password =  $_POST['password'];
 			
-			if($db_password == $password) {
+			if (password_verify($password, $db_password)) {	
 				$result = $results;
 			}
 		}

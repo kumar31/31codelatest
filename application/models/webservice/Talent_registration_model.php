@@ -30,10 +30,8 @@ class Talent_registration_model extends CI_Model {
 		else {
 			$login_type = "";
 		}
-		
-		$intermediateSalt = md5(sha1(getenv( 'SOIREE_PASSWORD_ENCRYPTION' )));
-		$salt = $intermediateSalt;
-		$password =  hash("sha256", $_POST['password'] . $salt);
+				
+		$password =  password_hash($_POST['password'], PASSWORD_DEFAULT);
 		
 		//$password = $this->encrypt->encode($_POST['password']);
 		$data = array(

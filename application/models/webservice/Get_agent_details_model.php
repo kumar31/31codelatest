@@ -64,10 +64,8 @@ class Get_agent_details_model extends CI_Model {
 			$result = $query->result_array(); 
 			$password = $result[0]['password'];
 		}
-		else{ 
-			$intermediateSalt = md5(sha1(getenv( 'SOIREE_PASSWORD_ENCRYPTION' )));
-			$salt = $intermediateSalt;
-			$password =  hash("sha256", $_POST['password'] . $salt);
+		else{ 			
+			$password =  password_hash($_POST['password'], PASSWORD_DEFAULT)."\n";
 			//$password = $this->encrypt->encode($_POST['password']);
 		}
 		
@@ -88,10 +86,8 @@ class Get_agent_details_model extends CI_Model {
 		}
 	}
 	function create(){
-		
-		$intermediateSalt = md5(sha1(getenv( 'SOIREE_PASSWORD_ENCRYPTION' )));
-		$salt = $intermediateSalt;
-		$password =  hash("sha256", $_POST['password'] . $salt);
+				
+		$password =  password_hash($_POST['password'], PASSWORD_DEFAULT);
 		
 		//$password = $this->encrypt->encode($_POST['password']);
 		
