@@ -5,7 +5,7 @@ class variableconfig {
   }
 
   function fpassurl() {
-    return getenv( 'SOIREE_BASE_URL' ) . '/index.php/webservice/reset_password/';
+    return getenv( 'SOIREE_BASE_URL' ) . '/index.php/reset_password/';
   }
 
   function from_email() {
