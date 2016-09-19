@@ -4,7 +4,7 @@ class Verify_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();
-		
+		$this->load->model('webservice/mail_model','mail_model');
 		
 	}
 	
@@ -73,8 +73,12 @@ class Verify_model extends CI_Model {
 			$email = $result[0]['email'];
 			$first_name = $result[0]['first_name'];
 			
-			
-			$this->email($email,$first_name,$user_id);
+			$subject = "Outfit";
+		   $message ="<p>Hi ".$firstName.",</p>";
+		   $message .="<p>Your email has been verified successfully.</p>";
+		   $message .="<p>Regards,<br>Outfit Admin</p>";
+			$this->mail_model->send($email,$subject,$message);
+			//$this->email($email,$first_name,$user_id);
 				$res= "1";
 			}
 			return $res;
