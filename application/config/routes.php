@@ -90,3 +90,4 @@ $route['admin_settings/(:num)'] = "admin_settings";
 $route['contractor_pay/(:num)'] = "contractor_pay";
 $route['verify/(:any)'] = "verify";
 $route['reset_password/(:num)/(:num)'] = "reset_password";
+$route['reset_password/(:num)'] = "reset_password";
