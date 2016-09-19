@@ -73,14 +73,14 @@ class Reset_password extends CI_Controller {
 			$email = $result[0]['email'];
 			$Password = $result[0]['password'];
 			$firstname = $result[0]['first_name']; 
-			$subject = "Nector - Password Reset Confirmation "; 
+			$subject = "Outfit - Password Reset Confirmation "; 
 			$messagetext = "<p>Dear ".$firstname.",</p>";
-			$messagetext .= "<p>You have reset your Nector Password on   .If you did not make these changes or if you believe an unauthorised person has accessed your account, you should change your password as soon as possible by clicking on the button below </p> </br>";
+			$messagetext .= "<p>You have reset your Outfit Password on   .If you did not make these changes or if you believe an unauthorised person has accessed your account, you should change your password as soon as possible by clicking on the button below </p> </br>";
 			$messagetext .= "<a href=".base_url()."webservice/index.php/reset_password/".$user_id."><button>Reset Password</button></a>";
 			$messagetext .= "<p>(Click the above button only if you have not changed your password at the date and time mentioned above).</p> </br>";
-			$messagetext .= "<p>Thanks for using Nector.</p>";
+			$messagetext .= "<p>Thanks for using Outfit.</p>";
 			$messagetext .= "<p>Sincerely,</p>";
-			$messagetext .= "<p>Nector Support</p>";
+			$messagetext .= "<p>Outfit Support</p>";
 			$messagetext .= "<p>Disclaimer: This email may contain privileged information and is intended solely for the addressee, 
 			and any disclosure &#x2F; misuse of this information is strictly prohibited, and may be unlawful.
 			If you have received this mail by mistake, Please delete this mail immediately.</p>";
