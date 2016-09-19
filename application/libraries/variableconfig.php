@@ -1,7 +1,7 @@
 <?php
 class variableconfig {
   function mailurl() {
-    return getenv( 'SOIREE_BASE_URL' ) . '/index.php/webservice/verify/';
+    return getenv( 'SOIREE_BASE_URL' ) . '/index.php/verify/';
   }
 
   function fpassurl() {
