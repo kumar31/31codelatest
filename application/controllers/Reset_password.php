@@ -9,6 +9,7 @@ class Reset_password extends CI_Controller {
         
 		$this->load->helper('url');
 		$this->load->helper('form');
+		$this->load->model('webservice/mail_model','mail_model');
 		$this->load->model('webservice/resetpassword_model','resetpassword_model');
 		
         
@@ -32,7 +33,7 @@ class Reset_password extends CI_Controller {
 			$id = $this->uri->segment(2);
 			$type = $this->uri->segment(3);
 			
-			$password = $_POST['password'];
+			$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 			$repassword = $_POST['passconf'];
 			
 			$data = array(
@@ -85,8 +86,8 @@ class Reset_password extends CI_Controller {
 			and any disclosure &#x2F; misuse of this information is strictly prohibited, and may be unlawful.
 			If you have received this mail by mistake, Please delete this mail immediately.</p>";
 			
-			
-			$this->sendemail($email,$messagetext,$subject);
+			$this->mail_model->send($email,$subject,$messagetext);
+			//$this->sendemail($email,$messagetext,$subject);
 			return $email;
 	}
 	
