@@ -87,4 +87,6 @@ $route['agent_dashboard/(:num)'] = "agent_dashboard";
 $route['agent_profile/(:num)'] = "agent_profile"; 
 $route['agent_talents/(:num)'] = "agent_talents"; 
 $route['admin_settings/(:num)'] = "admin_settings"; 
-$route['contractor_pay/(:num)'] = "contractor_pay"; 
+$route['contractor_pay/(:num)'] = "contractor_pay";
+$route['verify/(:any)'] = "verify";  
+$route['reset_password/(:any)'] = "reset_password";
