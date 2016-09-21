@@ -1,5 +1,4 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-error_reporting(0);
 date_default_timezone_set("GMT");
 require_once APPPATH.'/libraries/variableconfig.php';
 
