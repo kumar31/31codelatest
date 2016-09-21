@@ -30,8 +30,16 @@ class Reset_password extends CI_Controller {
 		}
 		else
 		{
-			$id = $this->uri->segment(2);
-			$type = $this->uri->segment(3);
+			$rand_num = $this->uri->segment(2);
+			//$type = $this->uri->segment(3);
+			
+			$this->db->select('*');
+			$this->db->where('opaque_id',$rand_num);
+			$this->db->from('password_reset_requests');
+			$query = $this->db->get();
+			$result = $query->result_array();
+			$user_id = $result[0]['user_id'];		
+			$type = $result[0]['type'];
 			
 			$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 			$repassword = $_POST['passconf'];
@@ -41,23 +49,33 @@ class Reset_password extends CI_Controller {
 			);
 				
 			if($type == 1) {
-				$this->db->where('client_id',$id);
+				$this->db->where('client_id',$user_id);
 				$this->db->update('client_details',$data);
 			}
 			if($type == 2) {
-				$this->db->where('talent_id',$id);
+				$this->db->where('talent_id',$user_id);
 				$this->db->update('talent_details',$data);
 			}
-			$this->email($id,$type);
+			
+			$this->db->where('opaque_id',$rand_num);
+			$this->db->delete('password_reset_requests');
+			
+			$this->email($user_id,$type);
 			$this->load->view('password_updated');
 		}
 		
 	}
 	
-	function email($id,$type) {
+	function email($user_id,$type) {
+		
+		$rand_num = rand(000000,999999);
+			
+		$dateFormat="Y-m-d H:i:s";
+		$timeNdate=gmdate($dateFormat, time());
+			
 		if($type == 1) {
 			$this->db->select('*');
-			$this->db->where('client_id',$id);
+			$this->db->where('client_id',$user_id);
 			$this->db->from('client_details');
 			$query = $this->db->get();
 			$result = $query->result_array();
@@ -65,19 +83,28 @@ class Reset_password extends CI_Controller {
 		}
 		if($type == 2) {
 			$this->db->select('*');
-			$this->db->where('talent_id',$id);
+			$this->db->where('talent_id',$user_id);
 			$this->db->from('talent_details');
 			$query = $this->db->get();
 			$result = $query->result_array();
 			$user_id = $result[0]['talent_id'];
 		}	
+		
+			$data = array(
+				'user_id' 				=> $userid,
+				'opaque_id' 			=> $rand_num,
+				'timestamp' 			=> $timeNdate,
+				'type' 					=> $_POST['type']
+			);
+			$this->db->insert('password_reset_requests',$data);
+			
 			$email = $result[0]['email'];
 			$Password = $result[0]['password'];
 			$firstname = $result[0]['first_name']; 
-			$subject = "Outfit - Password Reset Confirmation "; 
+			$subject = "Outfit - Password Reset Confirmation ";
 			$messagetext = "<p>Dear ".$firstname.",</p>";
 			$messagetext .= "<p>You have reset your Outfit Password on   .If you did not make these changes or if you believe an unauthorised person has accessed your account, you should change your password as soon as possible by clicking on the button below </p> </br>";
-			$messagetext .= "<a href=".base_url()."index.php/reset_password/".$user_id."><button>Reset Password</button></a>";
+			$messagetext .= "<a href=".base_url()."index.php/reset_password/".$rand_num."><button>Reset Password</button></a>";
 			$messagetext .= "<p>(Click the above button only if you have not changed your password at the date and time mentioned above).</p> </br>";
 			$messagetext .= "<p>Thanks for using Outfit.</p>";
 			$messagetext .= "<p>Sincerely,</p>";
@@ -89,20 +116,6 @@ class Reset_password extends CI_Controller {
 			$this->mail_model->send($email,$subject,$messagetext);
 			//$this->sendemail($email,$messagetext,$subject);
 			return $email;
-	}
-	
-	function sendemail($email,$messagetext,$subject){
-	
-			
-			$to = $email;
-			$headers = "MIME-Version: 1.0" . "\r\n";
-			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-			$headers .= 'From: <support@beta.outfitstaff.com>' . "\r\n";
-			$headers .= 'Cc: support@beta.outfitstaff.com' . "\r\n";
-			$headers .= 'Reply-To: <support@beta.outfitstaff.com>' . "\r\n"; 
-			$message = $messagetext;
-			mail($to,$subject,$message,$headers);
-	
 	}
 	
 }

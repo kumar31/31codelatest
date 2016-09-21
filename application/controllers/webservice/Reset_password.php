@@ -29,8 +29,16 @@ class Reset_password extends CI_Controller {
 		}
 		else
 		{
-			$id = $this->uri->segment(2);
-			$type = $this->uri->segment(3);
+			$rand_num = $this->uri->segment(2);
+			//$type = $this->uri->segment(3);
+			
+			$this->db->select('*');
+			$this->db->where('opaque_id',$rand_num);
+			$this->db->from('password_reset_requests');
+			$query = $this->db->get();
+			$result = $query->result_array();
+			$user_id = $result[0]['user_id'];		
+			$type = $result[0]['type'];
 			
 			$password = $_POST['password'];
 			$repassword = $_POST['passconf'];
@@ -40,11 +48,11 @@ class Reset_password extends CI_Controller {
 			);
 				
 			if($type == 1) {
-				$this->db->where('client_id',$id);
+				$this->db->where('client_id',$user_id);
 				$this->db->update('client_details',$data);
 			}
 			if($type == 2) {
-				$this->db->where('talent_id',$id);
+				$this->db->where('talent_id',$user_id);
 				$this->db->update('talent_details',$data);
 			}
 			$this->email($id,$type);
