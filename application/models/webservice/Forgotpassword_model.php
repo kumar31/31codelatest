@@ -53,7 +53,7 @@ class Forgotpassword_model extends CI_Model {
 			$message = "<p>Hi ".$firstname.",</p>";
 			$message .= "<p>You have requested recovery of your Outfit password.</p> </br>";
 			$message .= "<p>Click the button below and reset the password.</p> </br>";
-			$message .= "<a href=".$fpassurl.$rand_num"><button>Reset Password</button></a>";
+			$message .= "<a href=".$fpassurl.$rand_num."><button>Reset Password</button></a>";
 			$message .= "<p>If you did not request recovery of password, please ignore this mail. </br></p>";
 			$message .= "<p>Thanks for using Outfit.</p>";
 			$message .= "<p>Sincerely,</p>";
