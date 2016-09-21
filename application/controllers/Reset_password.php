@@ -91,10 +91,10 @@ class Reset_password extends CI_Controller {
 		}	
 		
 			$data = array(
-				'user_id' 				=> $userid,
+				'user_id' 				=> $user_id,
 				'opaque_id' 			=> $rand_num,
 				'timestamp' 			=> $timeNdate,
-				'type' 					=> $_POST['type']
+				'type' 					=> $type
 			);
 			$this->db->insert('password_reset_requests',$data);
 			
