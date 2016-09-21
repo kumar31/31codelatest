@@ -23,7 +23,6 @@ class Forgotpassword_model extends CI_Model {
 				$query = $this->db->get();
 				$result = $query->result_array();
 				$userid = $result[0]['client_id'];
-				$this->mail($result);
 			}
 			if($_POST['type'] == 2) {
 				$this->db->select('*');		
@@ -32,19 +31,8 @@ class Forgotpassword_model extends CI_Model {
 				$query = $this->db->get();
 				$result = $query->result_array();
 				$userid = $result[0]['talent_id'];
-				$this->mail($result);
 			}
-			if(!empty($result)) {
-				return $userid;	
-			}
-			else {
-				return "";
-			}
-			
-			
-	}
-	
-	function mail($result) {
+		
 			$to_email = $result[0]['email'];
 			$firstname = $result[0]['first_name']; 
 			$password = $result[0]['password'];
@@ -62,7 +50,10 @@ class Forgotpassword_model extends CI_Model {
 			If you have received this mail by mistake, Please delete this mail immediately.</p>";
 			
 			$this->mail_model->send($to_email,$subject,$message);
+			return $to_email;
 	}
+	
+
 	
 	
 }
