@@ -43,7 +43,7 @@ class Forgotpassword_model extends CI_Model {
 				'user_id' 				=> $userid,
 				'opaque_id' 			=> $rand_num,
 				'timestamp' 			=> $timeNdate,
-				'type' 					=> $_POST['type'],
+				'type' 					=> $_POST['type']
 			);
 			$this->db->insert('password_reset_requests',$data);	
 			
